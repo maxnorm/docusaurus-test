@@ -1,0 +1,114 @@
+/* ExpandableCode Component */
+.expandableCode {
+  margin: 1.5rem 0;
+}
+
+.codeTitle {
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: none;
+  border-radius: 0.75rem 0.75rem 0 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--ifm-heading-color);
+}
+
+[data-theme='dark'] .codeTitle {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+.codeWrapper {
+  position: relative;
+  border-radius: 0 0 0.75rem 0.75rem;
+  overflow: hidden;
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 1rem;
+  background: var(--ifm-code-background);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  transition: max-height 0.3s ease;
+}
+
+[data-theme='dark'] .codeBlock {
+  background: #0f0f0f;
+  border-color: #2a2a2a;
+}
+
+.codeBlockCollapsed {
+  max-height: calc(1.5rem * var(--max-lines, 10));
+  overflow: hidden;
+  position: relative;
+}
+
+.codeBlockCollapsed::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--ifm-code-background)
+  );
+  pointer-events: none;
+}
+
+[data-theme='dark'] .codeBlockCollapsed::after {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #0f0f0f
+  );
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-top: none;
+  border-radius: 0 0 0.75rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .expandButton {
+  background: #1a1a1a;
+  border-color: #2a2a2a;
+  color: #60a5fa;
+}
+
+.expandButton:hover {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .expandButton:hover {
+  background: #2a2a2a;
+  color: #93c5fd;
+}
+
+.expandButton:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: -2px;
+}
+
+.expandButton svg {
+  flex-shrink: 0;
+}
+
+

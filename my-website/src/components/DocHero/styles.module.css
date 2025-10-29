@@ -8,7 +8,7 @@
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   overflow: hidden;
   margin-bottom: 3rem;
-  border-radius: 0;
+  border-radius: 1.5rem;
 }
 
 /* Background Image Support */
@@ -56,19 +56,28 @@
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
   line-height: 1.1;
 }
 
 .docHeroSubtitle {
-  margin: 0;
+  margin: 0 auto 2rem auto;
   font-size: 1.25rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1.6;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+/* Button spacing in hero */
+.docHeroContent > * + * {
+  margin-top: 2rem;
 }
 
 /* Variants */

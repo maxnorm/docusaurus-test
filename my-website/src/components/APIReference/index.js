@@ -25,7 +25,7 @@ export default function APIReference({
     POST: '#3b82f6',
     PUT: '#f59e0b',
     DELETE: '#ef4444',
-    PATCH: '#8b5cf6'
+    PATCH: '#3b82f6'
   };
 
   return (

@@ -53,12 +53,12 @@
 }
 
 .callout.tip {
-  border-left-color: #8b5cf6;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, transparent 100%);
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
 }
 
 .callout.tip .calloutTitle {
-  color: #8b5cf6;
+  color: #3b82f6;
 }
 
 .callout.warning {
