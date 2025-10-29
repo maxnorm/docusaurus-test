@@ -84,10 +84,10 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <div className="text--center margin-bottom--xl">
-          <Heading as="h2" className="gradient-text" style={{fontSize: '2.5rem', marginBottom: '1rem'}}>
+          <Heading as="h2" className={styles.featuresHeading}>
             Why Compose is Different
           </Heading>
-          <p style={{fontSize: '1.25rem', color: 'var(--ifm-color-emphasis-700)', maxWidth: '800px', margin: '0 auto'}}>
+          <p className={styles.featuresDescription}>
             Forget traditional smart contract design patterns. Compose takes a radically different approach
             with Smart Contract Oriented Programming (SCOP).
           </p>

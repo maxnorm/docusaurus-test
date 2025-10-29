@@ -30,7 +30,7 @@ const config = {
   organizationName: 'Perfect-Abstractions', // Usually your GitHub org/user name.
   projectName: 'Compose', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -68,7 +68,7 @@ const config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css'],
         },
       }),
     ],
@@ -80,6 +80,8 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
         respectPrefersColorScheme: true,
       },
       navbar: {
@@ -90,16 +92,9 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
+            to: "/docs",
             position: 'left',
             label: 'Docs',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'apiSidebar',
-            position: 'left',
-            label: 'API Reference',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -125,12 +120,12 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'Core Concepts',
-                to: '/docs/core-concepts/facets-and-libraries',
+                label: 'Installation',
+                to: '/docs/getting-started/installation',
               },
               {
-                label: 'API Reference',
-                to: '/docs/api/overview',
+                label: 'Quick Start',
+                to: '/docs/getting-started/quick-start',
               },
             ],
           },
@@ -144,10 +139,6 @@ const config = {
               {
                 label: 'GitHub Discussions',
                 href: 'https://github.com/Perfect-Abstractions/Compose/discussions',
-              },
-              {
-                label: 'Contributing',
-                to: '/docs/contributing',
               },
             ],
           },
@@ -169,7 +160,8 @@ const config = {
             ],
           },
         ],
-        copyright: `Made with 🩵 by the Compose Community. Copyright © ${new Date().getFullYear()} Perfect Abstractions.`,
+        copyright: `Made with 🩵 by the Compose Community. <br/>
+          Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
         theme: prismThemes.github,

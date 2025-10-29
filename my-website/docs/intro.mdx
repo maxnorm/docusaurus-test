@@ -1,0 +1,230 @@
+---
+sidebar_position: 1
+slug: /
+collapse: true
+---
+
+import DocHero from '@site/src/components/DocHero';
+import DocCard, { DocCardGrid } from '@site/src/components/DocCard';
+import Callout from '@site/src/components/Callout';
+import FeatureGrid, { FeatureGridItem } from '@site/src/components/FeatureGrid';
+
+<DocHero
+  title="Build with the Compose Library"
+  subtitle="The Compose library gives developers access to a comprehensive standard library of smart contract facets. By using the library in combination with the ERC-2535 Diamond standard, you can build sophisticated on-chain systems with maximum code reusability."
+  variant="gradient"
+  height="medium"
+/>
+
+## Foundations
+
+<p style={{fontSize: '1.125rem', color: 'var(--ifm-color-emphasis-700)', marginBottom: '2rem'}}>
+  The building blocks of the Compose platform.
+</p>
+
+<DocCardGrid columns={2}>
+  <DocCard
+    title="AUTHENTICATION"
+    description="Access control and permission management for your diamond contracts. Implement role-based access control with composable facets."
+    icon="🔐"
+    href="/docs/foundations/authentication"
+  />
+  <DocCard
+    title="FACETS & LIBRARIES"
+    description="Understanding the core architecture: how facets and libraries work together through shared storage to build powerful systems."
+    icon="💎"
+    href="/docs/foundations/facets-and-libraries"
+  />
+  <DocCard
+    title="DIAMOND STANDARD"
+    description="Learn about ERC-2535 Diamonds and how Compose leverages this standard for upgradeable, modular smart contracts."
+    icon="💠"
+    href="/docs/foundations/diamond-standard"
+  />
+  <DocCard
+    title="STORAGE PATTERNS"
+    description="Master the shared storage architecture that enables seamless integration between standard facets and your custom logic."
+    icon="💾"
+    href="/docs/foundations/storage-patterns"
+  />
+</DocCardGrid>
+
+<Callout type="warning" title="Early Stage Development">
+Compose is currently in development and only available to contributors. It is **NOT production ready**. Use at your own risk in development environments only.
+</Callout>
+
+## What is Compose?
+
+**Compose** is a revolutionary smart contract library that helps developers create sophisticated smart contract systems using the **ERC-2535 Diamond** standard. It's designed from the ground up to prioritize code readability, on-chain composability, and developer understanding.
+
+### The Vision
+
+Imagine having access to a comprehensive, verified standard library of smart contract components that you can combine like LEGO blocks to build complex systems—all deployed once on-chain and reused across your projects. That's Compose.
+
+## Key Features
+
+<FeatureGrid columns={3}>
+  <FeatureGridItem
+    icon="📦"
+    title="On-Chain Standard Library"
+    description="Access verified, audited facets deployed once and reused across multiple diamonds on multiple blockchains."
+  />
+  <FeatureGridItem
+    icon="🔧"
+    title="Composable Architecture"
+    description="Mix and match facets and libraries to build exactly what you need without inheritance conflicts."
+  />
+  <FeatureGridItem
+    icon="📖"
+    title="Readability First"
+    description="Code designed to be understood. Smart Contract Oriented Programming prioritizes clarity over cleverness."
+  />
+  <FeatureGridItem
+    icon="🔄"
+    title="Upgradeable by Design"
+    description="Full power of ERC-2535 Diamonds means your contracts can evolve without redeployment."
+  />
+  <FeatureGridItem
+    icon="🛡️"
+    title="Battle-Tested Patterns"
+    description="Community-reviewed implementations following proven best practices and security standards."
+  />
+  <FeatureGridItem
+    icon="⚡"
+    title="Developer Experience"
+    description="Intuitive APIs, comprehensive documentation, and helpful libraries make development a breeze."
+  />
+</FeatureGrid>
+
+## How It Works
+
+Compose uses a **shared storage architecture** where both standard facets and your custom facets access the same data:
+
+```solidity
+// Your custom facet integrates with Compose using libraries
+import {LibERC721} from "compose/LibERC721.sol";
+
+contract GameNFTFacet {
+    function mintWithGameLogic(address player, uint256 tokenId) external {
+        // Your custom game logic
+        require(playerHasEnoughPoints(player), "Not enough points");
+        
+        // Use LibERC721 to mint - this modifies the SAME storage
+        // that ERC721Facet uses for balanceOf(), ownerOf(), etc.
+        LibERC721.mint(player, tokenId);
+        
+        // Now the player owns this NFT and can use standard
+        // ERC721Facet.transferFrom() to transfer it!
+        updatePlayerStats(player);
+    }
+}
+```
+
+<Callout type="tip" title="Key Insight">
+Both your `GameNFTFacet` and the standard `ERC721Facet` work with the **same storage** in your diamond. This is the power of Compose's shared storage architecture.
+</Callout>
+
+## Why Choose Compose?
+
+### ✅ For Projects That Value:
+- **Readability**: Code that's easy to understand and audit
+- **Reusability**: Deploy once, use everywhere
+- **Standards**: Battle-tested, community-reviewed implementations
+- **Upgradability**: Full power of ERC-2535 Diamonds
+- **Composability**: Mix and match functionality without conflicts
+
+### 🎓 Perfect For:
+- Building complex DeFi protocols
+- Creating NFT platforms with custom logic
+- Developing DAO governance systems
+- Projects requiring upgradeable smart contracts
+- Teams that prioritize code quality and maintainability
+
+## Core Principles
+
+<FeatureGrid columns={2}>
+  <FeatureGridItem
+    icon="👁️"
+    title="Read First"
+    description="Code clarity is the top priority. Every line should be understandable by developers and auditors."
+  />
+  <FeatureGridItem
+    icon="💎"
+    title="Diamond-Native"
+    description="Designed specifically for ERC-2535. Not adapted from inheritance patterns."
+  />
+  <FeatureGridItem
+    icon="🧩"
+    title="Composition Over Inheritance"
+    description="Combine facets instead of inheriting. Avoid the complexity of inheritance hierarchies."
+  />
+  <FeatureGridItem
+    icon="✨"
+    title="Intentional Simplicity"
+    description="Banned features lead to clearer code. Less magic, more understanding."
+  />
+</FeatureGrid>
+
+## Next Steps
+
+<DocCardGrid columns={2}>
+  <DocCard
+    title="Installation"
+    description="Set up your development environment and start building with Compose."
+    icon="🚀"
+    href="/docs/getting-started/installation"
+    size="large"
+  />
+  <DocCard
+    title="Quick Start"
+    description="Build your first diamond in under 5 minutes with Compose facets."
+    icon="⚡"
+    href="/docs/getting-started/quick-start"
+    size="large"
+  />
+</DocCardGrid>
+
+## Community & Support
+
+Compose is built with 🩵 by a vibrant community of developers who care about code quality.
+
+<DocCardGrid columns={2}>
+  <DocCard
+    title="Discord Community"
+    description="Get help and connect with other developers"
+    icon="💬"
+    href="https://discord.gg/compose"
+    external={true}
+    size="small"
+  />
+  <DocCard
+    title="GitHub Discussions"
+    description="Share ideas and ask questions"
+    icon="🐙"
+    href="https://github.com/Perfect-Abstractions/Compose/discussions"
+    external={true}
+    size="small"
+  />
+  <DocCard
+    title="GitHub Repository"
+    description="Check out the source code"
+    icon="⭐"
+    href="https://github.com/Perfect-Abstractions/Compose"
+    external={true}
+    size="small"
+  />
+  <DocCard
+    title="Blog"
+    description="Stay updated with latest news"
+    icon="📝"
+    href="/blog"
+    size="small"
+  />
+</DocCardGrid>
+
+---
+
+<div style={{textAlign: 'center', marginTop: '3rem', fontSize: '1.25rem', fontWeight: 600}}>
+Ready to revolutionize your smart contract development? Let's get started! 🚀
+</div>
+

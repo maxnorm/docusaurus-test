@@ -1,0 +1,55 @@
+/* Mobile Navigation Z-Index Fix */
+/* This file ensures the mobile navigation appears on top of all content */
+
+/* Ensure the navbar container has highest z-index */
+.navbar {
+  z-index: 1000 !important;
+  position: relative;
+}
+
+/* Mobile sidebar menu - must be on top */
+@media (max-width: 996px) {
+  .navbar-sidebar {
+    z-index: 9999 !important;
+    position: fixed !important;
+  }
+  
+  .navbar-sidebar__backdrop {
+    z-index: 9998 !important;
+    position: fixed !important;
+  }
+  
+  .navbar-sidebar__brand {
+    z-index: 10000 !important;
+  }
+  
+  .navbar-sidebar__items {
+    z-index: 10000 !important;
+  }
+}
+
+/* Ensure all main content is below navbar */
+div[class*="docMainContainer"],
+div[class*="mainWrapper"],
+div[class*="docItemContainer"],
+div[class*="docPage"],
+.main-wrapper,
+header[class*="hero"],
+article,
+.theme-doc-markdown,
+.markdown {
+  z-index: 1 !important;
+  position: relative;
+}
+
+/* Override any absolute/fixed positioning on main content */
+@media (max-width: 996px) {
+  main,
+  .main-wrapper,
+  div[class*="docMainContainer"],
+  div[class*="mainWrapper"] {
+    isolation: isolate;
+    z-index: 1 !important;
+  }
+}
+
