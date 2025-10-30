@@ -35,7 +35,7 @@ function HomepageHeader() {
           <div className={styles.heroCta}>
             <Link
               className={clsx(styles.ctaButton, styles.ctaPrimary)}
-              to="/docs/intro">
+              to="/docs">
               <span>Get Started</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -43,7 +43,7 @@ function HomepageHeader() {
             </Link>
             <Link
               className={clsx(styles.ctaButton, styles.ctaSecondary)}
-              to="/docs/core-concepts/facets-and-libraries">
+              to="/docs/foundations">
               <span>Learn Core Concepts</span>
             </Link>
           </div>
@@ -66,7 +66,7 @@ function HomepageHeader() {
               </svg>
               <span>Join Discord</span>
             </a>
-            <Link to="/docs/contributing" className={styles.heroLink}>
+            <Link to="/docs/contribution" className={styles.heroLink}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
@@ -233,7 +233,7 @@ function CodeShowcase() {
                 </div>
               </div>
             </div>
-            <Link to="/docs/core-concepts/facets-and-libraries" className={styles.showcaseLink}>
+            <Link to="/docs/foundations/facets-and-libraries" className={styles.showcaseLink}>
               Learn More
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -251,7 +251,8 @@ function CodeShowcase() {
                 <span className={styles.codeWindowTitle}>GameNFTFacet.sol</span>
               </div>
               <pre className={styles.codeWindowContent}>
-{`// Your custom facet uses LibERC721
+{`
+// Your custom facet uses LibERC721
 import {LibERC721} from "compose/LibERC721.sol";
 
 contract GameNFTFacet {
@@ -272,7 +273,8 @@ contract GameNFTFacet {
         // work seamlessly
         updatePlayerStats(player);
     }
-}`}
+}
+`}
               </pre>
             </div>
           </div>
