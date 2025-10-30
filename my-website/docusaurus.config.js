@@ -160,7 +160,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Made with 🩵 by the Compose Community. <br/>
+        copyright: `Made with 🩵 by the Compose Community.<br/>
           Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
