@@ -20,16 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://maxnorm.github.io',
+  url: 'https://docusaurus-test-8dzcobyq3-maxnorms-projects.vercel.app/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docusaurus-test/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'maxnorm', // Usually your GitHub org/user name.
   projectName: 'docusaurus-test', // Usually your repo name.
-  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
 
