@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkCompose_Documentation=globalThis.webpackChunkCompose_Documentation||[]).push([[5816],{2729:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/docusaurus-test/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

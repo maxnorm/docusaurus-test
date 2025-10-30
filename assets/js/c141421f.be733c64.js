@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkCompose_Documentation=globalThis.webpackChunkCompose_Documentation||[]).push([[957],{936:e=>{e.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);
