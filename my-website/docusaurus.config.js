@@ -20,15 +20,16 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://compose-docs.example.com',
+  url: 'https://maxnorm.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docusaurus-test/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Perfect-Abstractions', // Usually your GitHub org/user name.
-  projectName: 'Compose', // Usually your repo name.
+  organizationName: 'maxnorm', // Usually your GitHub org/user name.
+  projectName: 'docusaurus-test', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'warn',
 
