@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import {useGithubContributorsCount} from '../hooks/useGithubContributorsCount';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -251,8 +252,7 @@ function CodeShowcase() {
                 <span className={styles.codeWindowTitle}>GameNFTFacet.sol</span>
               </div>
               <pre className={styles.codeWindowContent}>
-{`
-// Your custom facet uses LibERC721
+{`// Your custom facet uses LibERC721
 import {LibERC721} from "compose/LibERC721.sol";
 
 contract GameNFTFacet {
@@ -273,8 +273,7 @@ contract GameNFTFacet {
         // work seamlessly
         updatePlayerStats(player);
     }
-}
-`}
+}`}
               </pre>
             </div>
           </div>
@@ -285,10 +284,16 @@ contract GameNFTFacet {
 }
 
 function StatsSection() {
+  const {value: contributorsValue} = useGithubContributorsCount({
+    owner: 'Perfect-Abstractions',
+    repo: 'Compose',
+    defaultValue: '17+',
+  });
+
   const stats = [
     { label: 'Open Source', value: 'MIT', icon: '📜' },
     { label: 'Diamond Standard', value: 'ERC-2535', icon: '💎' },
-    { label: 'Contributors', value: '17+', icon: '👥' },
+    { label: 'Contributors', value: contributorsValue, icon: '👥' },
     { label: 'Built with Love', value: 'Community', icon: '🩵' },
   ];
 
@@ -321,13 +326,13 @@ function CtaSection() {
             Start creating modular, maintainable smart contracts with our comprehensive documentation.
           </p>
           <div className={styles.ctaButtons}>
-            <Link to="/docs/intro" className={clsx(styles.ctaButton, styles.ctaPrimary)}>
+            <Link to="/docs" className={clsx(styles.ctaButton, styles.ctaPrimary)}>
               <span>Get Started</span>
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
-            <Link to="/docs/getting-started/quick-start" className={clsx(styles.ctaButton, styles.ctaSecondaryLight)}>
+            <Link to="/docs/getting-started/quick-start" className={clsx(styles.ctaButton, styles.ctaSecondary)}>
               <span>View Quick Start</span>
             </Link>
           </div>

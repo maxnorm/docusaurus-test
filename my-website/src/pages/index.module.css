@@ -615,7 +615,7 @@
 .statsGrid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -632,6 +632,11 @@
   border-radius: 1.25rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
 }
 
 .statCard::before {
@@ -670,7 +675,7 @@
 }
 
 .statValue {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 2.2vw, 2.5rem);
   font-weight: 900;
   background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
   -webkit-background-clip: text;
@@ -678,6 +683,8 @@
   background-clip: text;
   margin-bottom: 0.75rem;
   line-height: 1;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .statLabel {

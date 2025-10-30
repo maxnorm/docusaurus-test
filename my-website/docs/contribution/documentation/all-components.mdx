@@ -52,7 +52,7 @@ Each component section includes:
 
 ---
 
-## 📦 Table of Contents
+## Table of Contents
 
 1. [Content Display Components](#content-display-components) (8 components)
 2. [API Documentation Components](#api-documentation-components) (6 components)
@@ -65,7 +65,7 @@ Each component section includes:
 
 ---
 
-## 📦 Content Display Components
+## Content Display Components
 
 ### CodeShowcase
 
@@ -73,7 +73,7 @@ Displays tabbed code examples with syntax highlighting, perfect for showing the 
 
 <Badge variant="info">Content Display</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <CodeShowcase
   title="Authentication Example"
@@ -104,7 +104,7 @@ Displays tabbed code examples with syntax highlighting, perfect for showing the 
   ]}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
@@ -122,7 +122,7 @@ Displays tabbed code examples with syntax highlighting, perfect for showing the 
 }
 ```
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <CodeShowcase
@@ -142,7 +142,7 @@ Displays tabbed code examples with syntax highlighting, perfect for showing the 
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Provide examples in most commonly used languages (JavaScript, Python, cURL)
 - Keep code examples concise and focused on the specific feature
@@ -150,7 +150,7 @@ Displays tabbed code examples with syntax highlighting, perfect for showing the 
 - Test all code examples before publishing
 - Use consistent formatting across all tabs
 
-#### 🎯 When to Use
+#### When to Use
 
 - Multi-language API documentation
 - Tutorial code examples
@@ -165,7 +165,7 @@ Collapsible code blocks for long code snippets with automatic expansion controls
 
 <Badge variant="info">Content Display</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <ExpandableCode 
   language="javascript"
@@ -192,7 +192,7 @@ Collapsible code blocks for long code snippets with automatic expansion controls
 }`}
 </ExpandableCode>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -201,7 +201,7 @@ Collapsible code blocks for long code snippets with automatic expansion controls
 | `title` | string | undefined | Optional code block title |
 | `children` | ReactNode | Required | Code content |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <ExpandableCode language="typescript" maxLines={15} title="Full Implementation">
@@ -213,14 +213,14 @@ function yourCode() {
 </ExpandableCode>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use for code longer than 20 lines
 - Set appropriate maxLines based on context (10-15 typically)
 - Include title to describe what code does
 - Use for complete implementations or long examples
 
-#### 🎯 When to Use
+#### When to Use
 
 - Long code examples
 - Complete file contents
@@ -235,7 +235,7 @@ Styled terminal/shell command display with copy functionality.
 
 <Badge variant="info">Content Display</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <TerminalCommand 
   command="npm install @myapp/sdk"
@@ -250,7 +250,7 @@ Styled terminal/shell command display with copy functionality.
   prompt="#"
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -259,7 +259,7 @@ Styled terminal/shell command display with copy functionality.
 | `prompt` | string | '$' | Command prompt symbol |
 | `language` | string | 'bash' | Syntax highlighting language |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <TerminalCommand command="npm install package-name" />
@@ -270,14 +270,14 @@ Styled terminal/shell command display with copy functionality.
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use `$` prompt for user-level commands
 - Use `#` prompt for root/admin commands
 - Keep commands on single line when possible
 - Enable copyable for commands users will run
 
-#### 🎯 When to Use
+#### When to Use
 
 - Installation instructions
 - CLI commands
@@ -293,7 +293,7 @@ Collapsible sections perfect for FAQs, detailed explanations, or any content tha
 
 <Badge variant="primary">Content Enhancement</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <AccordionGroup>
   <Accordion title="What is Compose?" defaultOpen>
@@ -307,7 +307,7 @@ Collapsible sections perfect for FAQs, detailed explanations, or any content tha
   </Accordion>
 </AccordionGroup>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -316,7 +316,7 @@ Collapsible sections perfect for FAQs, detailed explanations, or any content tha
 | `variant` | string | 'default' | Style variant ('default', 'bordered') |
 | `children` | ReactNode | Required | Content to display when expanded |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <Accordion title="FAQ Question" defaultOpen>
@@ -330,14 +330,14 @@ Collapsible sections perfect for FAQs, detailed explanations, or any content tha
 </AccordionGroup>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Keep titles concise and descriptive
 - Use AccordionGroup for related FAQs
 - Consider defaultOpen for most important information
 - Use question format for FAQ titles
 
-#### 🎯 When to Use
+#### When to Use
 
 - FAQ sections
 - Collapsible details
@@ -353,11 +353,11 @@ Contextual information on hover.
 
 <Badge variant="primary">Content Enhancement</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 Hover over this <Tooltip content="This is a helpful tooltip with additional context!">highlighted text</Tooltip> to see the tooltip in action. You can also hover over <Tooltip content="Tooltips support all positions" position="bottom">this text</Tooltip> for a bottom tooltip.
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -365,7 +365,7 @@ Hover over this <Tooltip content="This is a helpful tooltip with additional cont
 | `position` | string | 'top' | Position ('top', 'bottom', 'left', 'right') |
 | `children` | ReactNode | Required | Trigger element |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <Tooltip content="Additional information" position="top">
@@ -377,14 +377,14 @@ Hover over this <Tooltip content="This is a helpful tooltip with additional cont
 </Tooltip>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Keep tooltip text concise (under 2 sentences)
 - Use for additional context, not essential information
 - Ensure tooltips are accessible with keyboard navigation
 - Don't nest interactive elements inside tooltips
 
-#### 🎯 When to Use
+#### When to Use
 
 - Defining technical terms
 - Providing additional context
@@ -393,7 +393,7 @@ Hover over this <Tooltip content="This is a helpful tooltip with additional cont
 
 ---
 
-## 🔌 API Documentation Components
+## API Documentation Components
 
 ### ApiEndpoint
 
@@ -401,7 +401,7 @@ Display REST API endpoints with HTTP method badges and parameters.
 
 <Badge variant="success">API Documentation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <ApiEndpoint 
   method="GET"
@@ -425,7 +425,7 @@ Display REST API endpoints with HTTP method badges and parameters.
   ]}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
@@ -443,7 +443,7 @@ Display REST API endpoints with HTTP method badges and parameters.
 }
 ```
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <ApiEndpoint
@@ -456,14 +456,14 @@ Display REST API endpoints with HTTP method badges and parameters.
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use correct HTTP method colors (automatically handled)
 - Include clear, concise descriptions
 - List all relevant parameters with required status
 - Use path parameter syntax consistently
 
-#### 🎯 When to Use
+#### When to Use
 
 - REST API documentation
 - Endpoint references
@@ -477,7 +477,7 @@ Documentation table for API object properties.
 
 <Badge variant="success">API Documentation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <PropertyTable 
   title="User Object Properties"
@@ -511,7 +511,7 @@ Documentation table for API object properties.
   ]}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -532,7 +532,7 @@ Documentation table for API object properties.
 }
 ```
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <PropertyTable
@@ -548,14 +548,14 @@ Documentation table for API object properties.
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Always include type information
 - Mark required fields accurately
 - Provide examples for complex types
 - Include default values when applicable
 
-#### 🎯 When to Use
+#### When to Use
 
 - API response documentation
 - Object property documentation
@@ -570,7 +570,7 @@ Similar to PropertyTable but optimized for function/API parameters.
 
 <Badge variant="success">API Documentation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <ParameterTable 
   title="Function Parameters"
@@ -598,11 +598,11 @@ Similar to PropertyTable but optimized for function/API parameters.
   ]}
 />
 
-#### 📝 Props
+#### Props
 
 Same as PropertyTable - optimized for parameter documentation.
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <ParameterTable
@@ -618,7 +618,7 @@ Same as PropertyTable - optimized for parameter documentation.
 />
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Function parameter documentation
 - API request parameters
@@ -633,7 +633,7 @@ Interactive JSON schema visualization with expandable nested properties.
 
 <Badge variant="success">API Documentation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <SchemaViewer 
   schema={{
@@ -660,7 +660,7 @@ Interactive JSON schema visualization with expandable nested properties.
   }}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -668,7 +668,7 @@ Interactive JSON schema visualization with expandable nested properties.
 | `collapsed` | boolean | false | Start collapsed |
 | `depth` | number | 0 | Initial nesting depth |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <SchemaViewer
@@ -684,14 +684,14 @@ Interactive JSON schema visualization with expandable nested properties.
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use realistic example data
 - Keep nesting reasonable (3-4 levels max)
 - Include common use case scenarios
 - Use descriptive property names
 
-#### 🎯 When to Use
+#### When to Use
 
 - JSON API responses
 - Configuration file examples
@@ -706,7 +706,7 @@ Complete API reference section with parameters and response tabs.
 
 <Badge variant="success">API Documentation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <APIReference
   method="POST"
@@ -741,7 +741,7 @@ Complete API reference section with parameters and response tabs.
   }}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
@@ -751,7 +751,7 @@ Complete API reference section with parameters and response tabs.
 | `parameters` | Array | No | Parameters |
 | `response` | Object | No | Example response |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <APIReference
@@ -768,7 +768,7 @@ Complete API reference section with parameters and response tabs.
 />
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Complete API documentation
 - When you need both parameters and response
@@ -782,7 +782,7 @@ Multi-step process visualization with completion states.
 
 <Badge variant="info">Navigation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <StepIndicator 
   steps={[
@@ -811,7 +811,7 @@ Multi-step process visualization with completion states.
   orientation="vertical"
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -828,7 +828,7 @@ Multi-step process visualization with completion states.
 }
 ```
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <StepIndicator
@@ -842,14 +842,14 @@ Multi-step process visualization with completion states.
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use clear, action-oriented step titles
 - Keep descriptions brief (one sentence)
 - Update currentStep as user progresses
 - Use vertical orientation for detailed steps
 
-#### 🎯 When to Use
+#### When to Use
 
 - Installation guides
 - Multi-step tutorials
@@ -859,7 +859,7 @@ Multi-step process visualization with completion states.
 
 ---
 
-## 🎨 Visual & Layout Components
+## Visual & Layout Components
 
 ### DocHero
 
@@ -867,7 +867,7 @@ Hero section for documentation pages with gradient backgrounds.
 
 <Badge variant="primary">Layout</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <DocHero
   title="API Documentation"
@@ -876,13 +876,13 @@ Hero section for documentation pages with gradient backgrounds.
   height="medium"
 >
   <div style={{ marginTop: '2rem' }}>
-    <GradientButton to="/docs/intro" size="large">
+    <GradientButton to="/docs/" size="large">
       Get Started
     </GradientButton>
   </div>
 </DocHero>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -893,7 +893,7 @@ Hero section for documentation pages with gradient backgrounds.
 | `height` | string | 'medium' | Height ('small', 'medium', 'large', 'full') |
 | `children` | ReactNode | undefined | Additional content |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <DocHero
@@ -926,7 +926,7 @@ Hero section for documentation pages with gradient backgrounds.
 </DocHero>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Keep titles concise and impactful
 - Use subtitle for additional context
@@ -935,7 +935,7 @@ Hero section for documentation pages with gradient backgrounds.
 - Choose appropriate height for content
 - Use size="large" for hero buttons to make them prominent
 
-#### 🎯 When to Use
+#### When to Use
 
 - Documentation landing pages
 - Section introductions
@@ -950,7 +950,7 @@ Navigation cards for linking to documentation pages.
 
 <Badge variant="primary">Layout</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <DocCardGrid columns={2}>
   <DocCard
@@ -983,7 +983,7 @@ Navigation cards for linking to documentation pages.
   />
 </DocCardGrid>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -995,7 +995,7 @@ Navigation cards for linking to documentation pages.
 | `size` | string | 'medium' | Size ('small', 'medium', 'large') |
 | `external` | boolean | false | External link |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <DocCard
@@ -1013,14 +1013,14 @@ Navigation cards for linking to documentation pages.
 </DocCardGrid>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use emojis or icons for visual appeal
 - Keep descriptions concise (1-2 sentences)
 - Group related cards with DocCardGrid
 - Use variant to highlight important cards
 
-#### 🎯 When to Use
+#### When to Use
 
 - Documentation navigation
 - Section landing pages
@@ -1035,7 +1035,7 @@ Responsive grid layout for displaying features.
 
 <Badge variant="primary">Layout</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <FeatureGrid columns={3}>
   <FeatureGridItem
@@ -1070,7 +1070,7 @@ Responsive grid layout for displaying features.
   />
 </FeatureGrid>
 
-#### 📝 Props
+#### Props
 
 **FeatureGrid:**
 | Prop | Type | Default | Description |
@@ -1086,7 +1086,7 @@ Responsive grid layout for displaying features.
 | `description` | string | Feature description |
 | `href` | string | Optional link |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <FeatureGrid columns={3}>
@@ -1103,14 +1103,14 @@ Responsive grid layout for displaying features.
 </FeatureGrid>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use 3 columns for desktop
 - Keep titles short (2-3 words)
 - Make descriptions concise
 - Use consistent icon style
 
-#### 🎯 When to Use
+#### When to Use
 
 - Feature showcases
 - Benefit lists
@@ -1125,7 +1125,7 @@ Animated feature card with gradient effects and hover animations.
 
 <Badge variant="primary">Visual</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem'}}>
   <FeatureCard
@@ -1148,7 +1148,7 @@ Animated feature card with gradient effects and hover animations.
   />
 </div>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Description |
 |------|------|-------------|
@@ -1158,7 +1158,7 @@ Animated feature card with gradient effects and hover animations.
 | `gradient` | string | Gradient variant ('gradientBlue', 'gradientPurple', 'gradientPink', 'gradientGreen') |
 | `link` | string | Optional link URL |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <FeatureCard
@@ -1170,7 +1170,7 @@ Animated feature card with gradient effects and hover animations.
 />
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Product features
 - Service highlights
@@ -1185,7 +1185,7 @@ Frosted glass effect container with backdrop blur.
 
 <Badge variant="primary">Visual</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <GlassCard hover={true}>
   <h3>Glassmorphism Effect</h3>
@@ -1193,14 +1193,14 @@ Frosted glass effect container with backdrop blur.
   <p>Perfect for highlighting important content or creating visual depth in your documentation.</p>
 </GlassCard>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `hover` | boolean | false | Enable hover animation |
 | `children` | ReactNode | Required | Card content |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <GlassCard hover={true}>
@@ -1209,14 +1209,14 @@ Frosted glass effect container with backdrop blur.
 </GlassCard>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use for important content highlights
 - Don't nest too deeply
 - Works best against colorful backgrounds
 - Test in both light and dark modes
 
-#### 🎯 When to Use
+#### When to Use
 
 - Special announcements
 - Featured content
@@ -1231,7 +1231,7 @@ Display statistics and metrics with optional trend indicators.
 
 <Badge variant="info">Data Display</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem'}}>
   <MetricCard
@@ -1259,7 +1259,7 @@ Display statistics and metrics with optional trend indicators.
   />
 </div>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Description |
 |------|------|-------------|
@@ -1268,7 +1268,7 @@ Display statistics and metrics with optional trend indicators.
 | `icon` | string | Optional icon |
 | `trend` | Object | Optional trend `{direction: 'up'/'down', value: '12%'}` |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <MetricCard
@@ -1279,7 +1279,7 @@ Display statistics and metrics with optional trend indicators.
 />
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Dashboard statistics
 - Performance metrics
@@ -1294,7 +1294,7 @@ Vertical timeline for roadmaps, changelogs, or historical events.
 
 <Badge variant="info">Navigation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <Timeline
   items={[
@@ -1325,7 +1325,7 @@ Vertical timeline for roadmaps, changelogs, or historical events.
   ]}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Description |
 |------|------|-------------|
@@ -1341,7 +1341,7 @@ Vertical timeline for roadmaps, changelogs, or historical events.
 }
 ```
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <Timeline
@@ -1362,7 +1362,7 @@ Vertical timeline for roadmaps, changelogs, or historical events.
 />
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Product roadmaps
 - Version history
@@ -1378,7 +1378,7 @@ Feature comparison table with highlighted columns.
 
 <Badge variant="info">Data Display</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <ComparisonTable
   columns={[
@@ -1412,7 +1412,7 @@ Feature comparison table with highlighted columns.
   ]}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Description |
 |------|------|-------------|
@@ -1436,7 +1436,7 @@ Feature comparison table with highlighted columns.
 }
 ```
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <ComparisonTable
@@ -1457,7 +1457,7 @@ Feature comparison table with highlighted columns.
 />
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Pricing comparisons
 - Feature comparisons
@@ -1466,7 +1466,7 @@ Feature comparison table with highlighted columns.
 
 ---
 
-## 🎨 Typography & UI Components
+## Typography & UI Components
 
 ### GradientText
 
@@ -1474,35 +1474,35 @@ Text with gradient color effects - perfect for headings and emphasis.
 
 <Badge variant="warning">Typography</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <h1><GradientText variant="primary">Primary Gradient Heading</GradientText></h1>
 <h2><GradientText variant="secondary">Secondary Gradient Heading</GradientText></h2>
 <h3><GradientText variant="accent">Accent Gradient Heading</GradientText></h3>
 <p><GradientText variant="success">Success gradient for inline text</GradientText></p>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Description |
 |------|------|-------------|
 | `variant` | string | Gradient variant ('primary', 'secondary', 'accent', 'success') |
 | `children` | ReactNode | Text content |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <h1><GradientText variant="primary">Title</GradientText></h1>
 <GradientText variant="accent">Highlighted text</GradientText>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use for main page titles
 - Use for important headings
 - Don't overuse - 1-2 per section max
 - Works great with DocHero
 
-#### 🎯 When to Use
+#### When to Use
 
 - Page titles
 - Section headings
@@ -1517,7 +1517,7 @@ Pill-shaped label for status, tags, and metadata.
 
 <Badge variant="warning">Typography</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <div style={{display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1rem'}}>
   <Badge variant="primary">Primary</Badge>
@@ -1536,7 +1536,7 @@ Pill-shaped label for status, tags, and metadata.
   <Badge variant="primary" size="large">Large</Badge>
 </div>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -1554,7 +1554,7 @@ Pill-shaped label for status, tags, and metadata.
 - `outline` - Subtle emphasis
 - `glass` - Glass effect
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <Badge variant="success">New</Badge>
@@ -1562,7 +1562,7 @@ Pill-shaped label for status, tags, and metadata.
 <Badge variant="info">v2.0</Badge>
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Status indicators
 - Version numbers
@@ -1578,7 +1578,7 @@ Animated button with gradient effects and glow on hover.
 
 <Badge variant="warning">Typography</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <div style={{display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '1rem'}}>
   <GradientButton to="/docs/getting-started" variant="primary" size="large">
@@ -1595,7 +1595,7 @@ Animated button with gradient effects and glow on hover.
   </GradientButton>
 </div>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -1605,7 +1605,7 @@ Animated button with gradient effects and glow on hover.
 | `external` | boolean | false | Open in new tab |
 | `children` | ReactNode | Required | Button content |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <GradientButton to="/docs/start" variant="primary" size="large">
@@ -1623,7 +1623,7 @@ Animated button with gradient effects and glow on hover.
 
 **Note:** Button sizing has been optimized for a more compact, square-like appearance with balanced padding.
 
-#### 🎯 When to Use
+#### When to Use
 
 - Call-to-action buttons
 - Primary actions
@@ -1638,7 +1638,7 @@ Smooth counting animation for numbers.
 
 <Badge variant="warning">Typography</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '2rem', marginBottom: '2rem', textAlign: 'center'}}>
   <div>
@@ -1667,7 +1667,7 @@ Smooth counting animation for numbers.
   </div>
 </div>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -1678,7 +1678,7 @@ Smooth counting animation for numbers.
 | `separator` | string | ',' | Thousands separator |
 | `decimals` | number | 0 | Decimal places |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <AnimatedCounter end={1000} suffix="+" />
@@ -1686,14 +1686,14 @@ Smooth counting animation for numbers.
 <AnimatedCounter end={5000000} suffix="M" separator="," />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use sparingly (3-4 per page max)
 - Only for important metrics
 - Animates on scroll into view
 - Works great with MetricCard
 
-#### 🎯 When to Use
+#### When to Use
 
 - Statistics
 - Metrics dashboards
@@ -1702,7 +1702,7 @@ Smooth counting animation for numbers.
 
 ---
 
-## 💬 Feedback & Metadata Components
+## Feedback & Metadata Components
 
 ### WasThisHelpful
 
@@ -1710,21 +1710,21 @@ Feedback widget for collecting user feedback on documentation pages.
 
 <Badge variant="success">Feedback</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <WasThisHelpful
   pageId="all-components-demo"
   onSubmit={(feedback) => console.log(feedback)}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Description |
 |------|------|-------------|
 | `pageId` | string | Unique page identifier |
 | `onSubmit` | Function | Callback when feedback submitted |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <WasThisHelpful
@@ -1736,14 +1736,14 @@ Feedback widget for collecting user feedback on documentation pages.
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Place at bottom of pages
 - Use unique pageId per page
 - Integrate with analytics
 - Respond to feedback
 
-#### 🎯 When to Use
+#### When to Use
 
 - End of documentation pages
 - After tutorials
@@ -1758,7 +1758,7 @@ Display when page was last updated.
 
 <Badge variant="success">Metadata</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <LastUpdated date="2024-01-15" />
 
@@ -1770,7 +1770,7 @@ Display when page was last updated.
   showAuthor={true} 
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -1778,7 +1778,7 @@ Display when page was last updated.
 | `author` | string | undefined | Optional author |
 | `showAuthor` | boolean | false | Show author name |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <LastUpdated date="2024-01-15" />
@@ -1789,7 +1789,7 @@ Display when page was last updated.
 />
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Page metadata
 - Documentation updates
@@ -1804,7 +1804,7 @@ Calculate and display estimated reading time.
 
 <Badge variant="success">Metadata</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <ReadingTime wordsPerMinute={200}>
 {`This is a sample article that demonstrates the reading time calculator component. 
@@ -1816,14 +1816,14 @@ helps users make informed decisions about when to read the content and can impro
 the overall user experience of your documentation site.`}
 </ReadingTime>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | `content` | string/ReactNode | Required | Content to analyze |
 | `wordsPerMinute` | number | 200 | Reading speed |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <ReadingTime content={articleContent} />
@@ -1832,7 +1832,7 @@ the overall user experience of your documentation site.`}
 </ReadingTime>
 ```
 
-#### 🎯 When to Use
+#### When to Use
 
 - Long articles
 - Tutorials
@@ -1847,14 +1847,14 @@ Display related documentation articles with navigation cards.
 
 <Badge variant="info">Navigation</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <RelatedDocs 
   title="Related Documentation"
   items={[
     { 
       title: "System Design Guide", 
-      href: "/docs/system-design-guide", 
+      href: "/docs/contribution/documentation/system-design-guide", 
       description: "Learn our documentation standards and best practices",
       icon: "📐" 
     },
@@ -1873,7 +1873,7 @@ Display related documentation articles with navigation cards.
   ]}
 />
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -1890,7 +1890,7 @@ Display related documentation articles with navigation cards.
 }
 ```
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <RelatedDocs
@@ -1906,14 +1906,14 @@ Display related documentation articles with navigation cards.
 />
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Place at end of pages
 - Link to 2-4 related pages
 - Use descriptive icons
 - Write clear descriptions
 
-#### 🎯 When to Use
+#### When to Use
 
 - End of documentation pages
 - Navigation between related topics
@@ -1928,7 +1928,7 @@ Enhanced admonition-style component for important information.
 
 <Badge variant="primary">Content Enhancement</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <Callout type="info" title="Information">
 This is an informational callout with useful context.
@@ -1954,7 +1954,7 @@ Your configuration has been saved successfully!
 This is a simple note without a custom title.
 </Callout>
 
-#### 📝 Props
+#### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -1963,7 +1963,7 @@ This is a simple note without a custom title.
 | `icon` | boolean | true | Show icon |
 | `children` | ReactNode | Required | Content |
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <Callout type="warning" title="Important">
@@ -1975,14 +1975,14 @@ This is a simple note without a custom title.
 </Callout>
 ```
 
-#### ✅ Best Practices
+#### Best Practices
 
 - Use appropriate type for content
 - Keep content concise
 - Don't nest callouts
 - Use sparingly for impact
 
-#### 🎯 When to Use
+#### When to Use
 
 - Important warnings
 - Helpful tips
@@ -1998,7 +1998,7 @@ Alternative callout component with different styling.
 
 <Badge variant="primary">Content Enhancement</Badge>
 
-#### 🎨 Live Example
+#### Live Example
 
 <CalloutBox type="info" title="Did You Know?">
 CalloutBox offers an alternative styling to the standard Callout component.
@@ -2008,11 +2008,11 @@ CalloutBox offers an alternative styling to the standard Callout component.
 Always validate user input before processing.
 </CalloutBox>
 
-#### 📝 Props
+#### Props
 
 Same as Callout component.
 
-#### 💻 Usage
+#### Usage
 
 ```jsx
 <CalloutBox type="info" title="Note">
@@ -2022,7 +2022,7 @@ Same as Callout component.
 
 ---
 
-## 📚 Quick Reference
+## Quick Reference
 
 ### Component Selection Guide
 
@@ -2052,7 +2052,7 @@ Same as Callout component.
 
 ---
 
-## 🎯 Best Practices Summary
+## Best Practices Summary
 
 ### Component Usage
 1. Use the right component for the job
@@ -2083,13 +2083,13 @@ Same as Callout component.
 
 ---
 
-## 📖 Additional Resources
+## Additional Resources
 
 <RelatedDocs
   items={[
     {
       title: 'System Design Guide',
-      href: '/docs/system-design-guide',
+      href: '/docs/contribution/documentation/system-design-guide',
       description: 'Complete documentation standards and guidelines',
       icon: '📐'
     },
