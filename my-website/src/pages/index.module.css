@@ -215,6 +215,19 @@
   color: white;
 }
 
+/* Disabled button state */
+.ctaButtonDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.ctaButtonDisabled:hover {
+  transform: none;
+  background: inherit;
+  border-color: inherit;
+}
+
 .heroLinks {
   display: flex;
   align-items: center;
