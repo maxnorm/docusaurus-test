@@ -9,6 +9,9 @@
 /* Import documentation-specific styles */
 @import url('./documentation.css');
 
+/* Import custom navbar styles */
+@import url('./navbar.css');
+
 /* Base color palette for Compose - Blockchain-inspired blues */
 :root {
   /* Primary brand colors - Vibrant blue tones */

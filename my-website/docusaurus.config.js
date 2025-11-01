@@ -91,13 +91,39 @@ const config = {
           alt: 'Compose Logo',
           src: 'img/logo.svg',
         },
+        hideOnScroll: false,
         items: [
           {
             to: "/docs",
             position: 'left',
             label: 'Docs',
+            activeBaseRegex: '/docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'left',
+            activeBaseRegex: '/blog',
+          },
+          {
+            type: 'dropdown',
+            label: 'Resources',
+            position: 'left',
+            items: [
+              {
+                label: 'Getting Started',
+                to: '/docs/getting-started/installation',
+              },
+              {
+                label: 'Examples',
+                to: '/docs/examples',
+              },
+              {
+                label: 'API Reference',
+                to: '/docs/api',
+              },
+            ],
+          },
           {
             href: 'https://discord.gg/compose',
             label: 'Discord',

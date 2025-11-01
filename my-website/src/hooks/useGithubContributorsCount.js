@@ -68,6 +68,3 @@ export function useGithubContributorsCount({
 
   return {value, count, isLoading, error};
 }
-
-
-
