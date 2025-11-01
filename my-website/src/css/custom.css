@@ -12,6 +12,9 @@
 /* Import custom navbar styles */
 @import url('./navbar.css');
 
+/* Import search modal styles */
+@import url('./search.css');
+
 /* Base color palette for Compose - Blockchain-inspired blues */
 :root {
   /* Primary brand colors - Vibrant blue tones */

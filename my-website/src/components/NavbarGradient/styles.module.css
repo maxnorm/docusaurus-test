@@ -10,69 +10,49 @@
   bottom: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.4;
   z-index: -1;
 }
 
 .gradientOrb1,
-.gradientOrb2,
-.gradientOrb3 {
+.gradientOrb2 {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.3;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+  filter: blur(60px);
+  opacity: 0.15;
 }
 
 .gradientOrb1 {
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
   top: -150px;
-  left: 10%;
-  animation: float1 20s infinite;
+  left: -100px;
+  animation: float1 20s ease-in-out infinite;
 }
 
 .gradientOrb2 {
   width: 250px;
   height: 250px;
-  background: radial-gradient(circle, rgba(96, 165, 250, 0.3) 0%, transparent 70%);
-  top: -125px;
-  right: 20%;
-  animation: float2 25s infinite;
-}
-
-.gradientOrb3 {
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(30, 64, 175, 0.3) 0%, transparent 70%);
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
   top: -100px;
-  left: 50%;
-  animation: float3 30s infinite;
+  right: -80px;
+  animation: float2 25s ease-in-out infinite;
 }
 
 [data-theme='dark'] .gradientOrb1 {
-  background: radial-gradient(circle, rgba(96, 165, 250, 0.2) 0%, transparent 70%);
+  opacity: 0.08;
 }
 
 [data-theme='dark'] .gradientOrb2 {
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-}
-
-[data-theme='dark'] .gradientOrb3 {
-  background: radial-gradient(circle, rgba(30, 64, 175, 0.15) 0%, transparent 70%);
+  opacity: 0.08;
 }
 
 @keyframes float1 {
   0%, 100% {
     transform: translate(0, 0) scale(1);
   }
-  33% {
-    transform: translate(30px, -20px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 10px) scale(0.9);
+  50% {
+    transform: translate(30px, 20px) scale(1.1);
   }
 }
 
@@ -80,30 +60,16 @@
   0%, 100% {
     transform: translate(0, 0) scale(1);
   }
-  33% {
-    transform: translate(-25px, 15px) scale(0.95);
-  }
-  66% {
-    transform: translate(20px, -10px) scale(1.05);
-  }
-}
-
-@keyframes float3 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(15px, 20px) scale(1.05);
-  }
-  66% {
-    transform: translate(-30px, -15px) scale(0.95);
+  50% {
+    transform: translate(-20px, 30px) scale(1.15);
   }
 }
 
 /* Disable animations on mobile for performance */
 @media (max-width: 996px) {
-  .gradientContainer {
+  .gradientOrb1,
+  .gradientOrb2 {
+    animation: none;
     display: none;
   }
 }
-

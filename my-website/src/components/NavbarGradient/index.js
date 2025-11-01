@@ -1,6 +1,6 @@
 /**
- * Animated Navbar Gradient Background
- * Subtle animated gradient overlay for the navbar
+ * Animated Gradient Background for Navbar
+ * Adds floating gradient orbs for visual interest
  */
 
 import React from 'react';
@@ -11,8 +11,6 @@ export default function NavbarGradient() {
     <div className={styles.gradientContainer}>
       <div className={styles.gradientOrb1}></div>
       <div className={styles.gradientOrb2}></div>
-      <div className={styles.gradientOrb3}></div>
     </div>
   );
 }
-
