@@ -49,8 +49,12 @@ export default function CodeShowcase({ examples, title, description }) {
           id={`code-panel-${activeTab}`}
           aria-labelledby={`code-tab-${activeTab}`}
           tabIndex={0}
+          className={styles.tabpanel}
         >
-          <CodeBlock language={examples[activeTab].language || 'solidity'}>
+          <CodeBlock 
+            language={examples[activeTab].language || 'solidity'}
+            className={styles.codeBlock}
+          >
             {examples[activeTab].code}
           </CodeBlock>
         </div>
