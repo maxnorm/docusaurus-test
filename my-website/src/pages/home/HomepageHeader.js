@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Heading from '@theme/Heading';
-import GitHubStarButton from '@site/src/components/GitHubStarButton';
+import GitHubStarButton from '@site/src/components/navigation/GitHubStarButton';
 import styles from '../index.module.css';
 
 export default function HomepageHeader() {

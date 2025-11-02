@@ -15,7 +15,7 @@ import SearchBar from '@theme/SearchBar';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarSearch from '@theme/Navbar/Search';
-import NavbarGradient from '@site/src/components/NavbarGradient';
+import NavbarGradient from '@site/src/components/navigation/NavbarGradient';
 import styles from './styles.module.css';
 
 function useNavbarItems() {
@@ -69,7 +69,7 @@ export default function NavbarContent() {
           {/* Status Badge */}
           <div className={styles.statusBadge}>
             <span className={styles.badgeDot}></span>
-            <span className={styles.badgeText}>Beta</span>
+            <span className={styles.badgeText}>Early Stage</span>
           </div>
           <NavbarItems items={leftItems} />
         </>
