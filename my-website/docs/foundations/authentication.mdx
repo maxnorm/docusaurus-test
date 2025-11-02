@@ -28,17 +28,17 @@ Authentication facets use the same shared storage pattern as all Compose compone
 
 <FeatureGrid columns={3}>
   <FeatureGridItem
-    icon="👥"
+    icon={<Icon name="users" size={28} />}
     title="Role-Based Access"
     description="Define custom roles with specific permissions for different user types."
   />
   <FeatureGridItem
-    icon="🔑"
+    icon={<Icon name="key" size={28} />}
     title="Flexible Permissions"
     description="Grant and revoke permissions dynamically without redeployment."
   />
   <FeatureGridItem
-    icon="🔒"
+    icon={<Icon name="padlock" size={28} />}
     title="Secure by Default"
     description="Built-in checks and modifiers to prevent unauthorized access."
   />
@@ -245,13 +245,13 @@ contract TimeLockFacet {
 
 <FeatureGrid columns={2}>
   <FeatureGridItem
-    icon="💎"
+    icon={<Icon name="diamond" size={32} />}
     title="Facets & Libraries"
     description="Learn how authentication integrates with the facet architecture."
     href="/docs/foundations/facets-and-libraries"
   />
   <FeatureGridItem
-    icon="🛡️"
+    icon={<Icon name="shield" size={32} />}
     title="Security Best Practices"
     description="Explore comprehensive security patterns for your contracts."
     href="/docs/"

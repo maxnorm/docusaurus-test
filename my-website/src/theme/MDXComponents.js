@@ -6,6 +6,7 @@ import GradientText from '@site/src/components/ui/GradientText';
 import Badge from '@site/src/components/ui/Badge';
 import CalloutBox from '@site/src/components/ui/CalloutBox';
 import MetricCard from '@site/src/components/data-display/MetricCard';
+import Icon from '@site/src/components/ui/Icon';
 import Accordion, { AccordionGroup } from '@site/src/components/ui/Accordion';
 import StepIndicator from '@site/src/components/docs/StepIndicator';
 import ApiEndpoint from '@site/src/components/api/ApiEndpoint';
@@ -28,6 +29,7 @@ export default {
   Badge,
   CalloutBox,
   MetricCard,
+  Icon,
   Accordion,
   AccordionGroup,
   StepIndicator,

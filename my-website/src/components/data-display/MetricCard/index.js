@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../../ui/Icon';
 import styles from './styles.module.css';
 
 export default function MetricCard({ value, label, icon, trend }) {
@@ -8,7 +9,11 @@ export default function MetricCard({ value, label, icon, trend }) {
         {icon && <span className={styles.metricIcon}>{icon}</span>}
         {trend && (
           <span className={`${styles.trend} ${styles[trend.direction]}`}>
-            {trend.direction === 'up' ? '↗' : '↘'} {trend.value}
+            <Icon 
+              name={trend.direction === 'up' ? 'arrow-up-right' : 'arrow-down-right'} 
+              size={16} 
+            />{' '}
+            {trend.value}
           </span>
         )}
       </div>

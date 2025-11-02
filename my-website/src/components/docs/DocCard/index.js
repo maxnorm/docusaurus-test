@@ -9,7 +9,7 @@ import styles from './styles.module.css';
  * @param {string} title - Card title
  * @param {string} description - Card description
  * @param {string} href - Link destination
- * @param {string} icon - Icon to display (emoji or component)
+ * @param {string} icon - Icon component to display
  * @param {string} variant - Card style variant ('default', 'primary', 'secondary')
  * @param {string} size - Card size ('small', 'medium', 'large')
  * @param {boolean} external - Whether the link is external
@@ -28,11 +28,7 @@ export default function DocCard({
     <>
       {icon && (
         <div className={styles.docCardIcon}>
-          {typeof icon === 'string' ? (
-            <span className={styles.iconEmoji}>{icon}</span>
-          ) : (
-            icon
-          )}
+          {icon}
         </div>
       )}
       <div className={styles.docCardContent}>

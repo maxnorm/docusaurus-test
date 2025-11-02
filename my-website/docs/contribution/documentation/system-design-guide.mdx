@@ -203,9 +203,9 @@ Content...
 </DocHero>
 
 <FeatureGrid columns={3}>
-  <FeatureGridItem icon="⚡" title="Fast" description="..." />
-  <FeatureGridItem icon="🔒" title="Secure" description="..." />
-  <FeatureGridItem icon="📈" title="Scalable" description="..." />
+  <FeatureGridItem icon={<Icon name="lightning" size={32} />} title="Fast" description="..." />
+  <FeatureGridItem icon={<Icon name="padlock" size={32} />} title="Secure" description="..." />
+  <FeatureGridItem icon={<Icon name="chart" size={32} />} title="Scalable" description="..." />
 </FeatureGrid>
 ```
 
@@ -504,13 +504,13 @@ Before you begin, make sure you have:
     title="Tutorials"
     description="Learn with hands-on tutorials"
     href="/docs/tutorials"
-    icon="📚"
+    icon={<Icon name="books" size={32} />}
   />
   <DocCard
     title="API Reference"
     description="Complete API documentation"
     href="/docs/api"
-    icon="📖"
+    icon={<Icon name="book" size={32} />}
   />
 </DocCardGrid>
 ```
@@ -829,17 +829,17 @@ Before publishing any documentation page, verify:
 ```jsx
 <FeatureGrid columns={3}>
   <FeatureGridItem
-    icon="⚡"
+    icon={<Icon name="lightning" size={32} />}
     title="Fast"
     description="Lightning-fast performance"
   />
   <FeatureGridItem
-    icon="🔒"
+    icon={<Icon name="padlock" size={32} />}
     title="Secure"
     description="Enterprise-grade security"
   />
   <FeatureGridItem
-    icon="📈"
+    icon={<Icon name="chart" size={32} />}
     title="Scalable"
     description="Grows with your needs"
   />
@@ -906,14 +906,14 @@ Additional context or background information.
     title="Component Reference"
     description="Complete guide to all components"
     href="/docs/contribution/documentation/all-components"
-    icon="🧩"
+    icon={<Icon name="puzzle" size={32} />}
     variant="primary"
   />
   <DocCard
     title="Component Inventory"
     description="Quick component lookup"
     href="/docs/components/component-inventory"
-    icon="📦"
+    icon={<Icon name="package" size={32} />}
     variant="secondary"
   />
 </DocCardGrid>

@@ -41,17 +41,17 @@ Facets are fully functional smart contracts that can be added to your diamond:
 
 <FeatureGrid columns={3}>
   <FeatureGridItem
-    icon="📦"
+    icon={<Icon name="package" size={32} />}
     title="Self-Contained"
     description="Complete implementations ready to use out of the box."
   />
   <FeatureGridItem
-    icon="🔌"
+    icon={<Icon name="plug" size={32} />}
     title="Plug & Play"
     description="Add to your diamond via the diamond cut function."
   />
   <FeatureGridItem
-    icon="✅"
+    icon={<Icon name="checkmark" size={32} />}
     title="Verified"
     description="Audited, tested, and deployed on multiple chains."
   />
@@ -92,17 +92,17 @@ Libraries provide internal functions that your custom facets can use:
 
 <FeatureGrid columns={3}>
   <FeatureGridItem
-    icon="🔧"
+    icon={<Icon name="wrench" size={32} />}
     title="Building Blocks"
     description="Reusable functions for your custom logic."
   />
   <FeatureGridItem
-    icon="💾"
+    icon={<Icon name="save" size={32} />}
     title="Shared Storage"
     description="Access the same data as standard facets."
   />
   <FeatureGridItem
-    icon="🎨"
+    icon={<Icon name="palette" size={32} />}
     title="Flexible"
     description="Combine with your custom logic however you need."
   />
@@ -203,7 +203,7 @@ You don't need to inherit from anything. You don't need to override functions. J
 
 <DocCardGrid columns={2}>
   <DocCard
-    icon="📦"
+    icon={<Icon name="package" size={32} />}
     title="Use Facets When..."
     description="You want standard, complete functionality with no customization needed."
   >
@@ -214,7 +214,7 @@ You don't need to inherit from anything. You don't need to override functions. J
     </ul>
   </DocCard>
   <DocCard
-    icon="🔧"
+    icon={<Icon name="wrench" size={32} />}
     title="Use Libraries When..."
     description="You're building custom facets that need to integrate with Compose."
   >
@@ -271,22 +271,22 @@ Your `QuestRewardsFacet` mints NFTs that work with all standard ERC721 functions
 
 <FeatureGrid columns={2}>
   <FeatureGridItem
-    icon="✅"
+    icon={<Icon name="checkmark" size={32} />}
     title="Do: Use Libraries in Custom Facets"
     description="Import and use library functions to integrate with Compose functionality."
   />
   <FeatureGridItem
-    icon="✅"
+    icon={<Icon name="checkmark" size={32} />}
     title="Do: Add Standard Facets As-Is"
     description="Use complete facets when you don't need customization."
   />
   <FeatureGridItem
-    icon="❌"
+    icon={<Icon name="cross" size={32} />}
     title="Don't: Modify Standard Facets"
     description="Create custom facets instead. Keep standard facets unchanged."
   />
   <FeatureGridItem
-    icon="❌"
+    icon={<Icon name="cross" size={32} />}
     title="Don't: Call Facets from Facets"
     description="Use libraries for facet-to-facet communication, not external calls."
   />
@@ -296,22 +296,22 @@ Your `QuestRewardsFacet` mints NFTs that work with all standard ERC721 functions
 
 <DocCardGrid columns={2}>
   <DocCard
-    icon="🪙"
+    icon={<Icon name="coin" size={32} />}
     title="ERC20"
     description="Fungible token standard with mint, burn, and transfer functionality."
   />
   <DocCard
-    icon="🎨"
+    icon={<Icon name="palette" size={32} />}
     title="ERC721"
     description="Non-fungible token (NFT) standard with full metadata support."
   />
   <DocCard
-    icon="💎"
+    icon={<Icon name="diamond" size={32} />}
     title="ERC1155"
     description="Multi-token standard supporting both fungible and non-fungible tokens."
   />
   <DocCard
-    icon="🔐"
+    icon={<Icon name="lock" size={32} />}
     title="Access Control"
     description="Role-based permission system for managing contract access."
   />
@@ -321,13 +321,13 @@ Your `QuestRewardsFacet` mints NFTs that work with all standard ERC721 functions
 
 <FeatureGrid columns={2}>
   <FeatureGridItem
-    icon="💾"
+    icon={<Icon name="save" size={32} />}
     title="Storage Patterns"
     description="Deep dive into how shared storage works under the hood."
     href="/docs/"
   />
   <FeatureGridItem
-    icon="🚀"
+    icon={<Icon name="rocket" size={32} />}
     title="Quick Start"
     description="Build your first diamond with facets and libraries."
     href="/docs/getting-started/quick-start"

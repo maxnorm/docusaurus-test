@@ -14,6 +14,7 @@ import Timeline from '@site/src/components/data-display/Timeline';
 import ComparisonTable from '@site/src/components/data-display/ComparisonTable';
 import AnimatedCounter from '@site/src/components/animations/AnimatedCounter';
 import GradientButton from '@site/src/components/ui/GradientButton';
+import Icon from '@site/src/components/ui/Icon';
 
 # Component Showcase
 
@@ -99,7 +100,7 @@ Sizes:
 <div className="row" style={{marginBottom: '2rem'}}>
   <div className="col col--4">
     <FeatureCard
-      icon="🎯"
+      icon={<Icon name="target" size={32} />}
       title="Read First"
       description="Code written to be understood first, not just executed."
       gradient="gradientBlue"
@@ -107,7 +108,7 @@ Sizes:
   </div>
   <div className="col col--4">
     <FeatureCard
-      icon="💎"
+      icon={<Icon name="diamond" size={32} />}
       title="Diamond-Native"
       description="Built specifically for ERC-2535 Diamonds with on-chain composability."
       gradient="gradientBlue"
@@ -115,7 +116,7 @@ Sizes:
   </div>
   <div className="col col--4">
     <FeatureCard
-      icon="🔧"
+      icon={<Icon name="wrench" size={32} />}
       title="Composable"
       description="Combine facets instead of inheriting contracts for maximum flexibility."
       gradient="gradientCyan"
@@ -125,7 +126,7 @@ Sizes:
 
 ```jsx
 <FeatureCard
-  icon="🎯"
+  icon={<Icon name="target" size={32} />}
   title="Feature Title"
   description="Feature description goes here"
   gradient="gradientBlue"
@@ -142,7 +143,7 @@ Sizes:
     <MetricCard
       value={<AnimatedCounter end={1000} suffix="+" />}
       label="Users"
-      icon="👥"
+      icon={<Icon name="users" size={24} />}
       trend={{direction: 'up', value: '12%'}}
     />
   </div>
@@ -150,7 +151,7 @@ Sizes:
     <MetricCard
       value={<AnimatedCounter end={50} suffix="K" />}
       label="Downloads"
-      icon="📥"
+      icon={<Icon name="download" size={24} />}
       trend={{direction: 'up', value: '25%'}}
     />
   </div>
@@ -158,14 +159,14 @@ Sizes:
     <MetricCard
       value="99.9%"
       label="Uptime"
-      icon="⚡"
+      icon={<Icon name="lightning" size={24} />}
     />
   </div>
   <div className="col col--3">
     <MetricCard
       value={<AnimatedCounter end={24} suffix="/7" />}
       label="Support"
-      icon="💬"
+      icon={<Icon name="chat" size={24} />}
     />
   </div>
 </div>
@@ -174,7 +175,7 @@ Sizes:
 <MetricCard
   value="1000+"
   label="Users"
-  icon="👥"
+  icon={<Icon name="users" size={24} />}
   trend={{direction: 'up', value: '12%'}}
 />
 ```

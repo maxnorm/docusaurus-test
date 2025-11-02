@@ -1,4 +1,5 @@
 import {useGithubContributorsCount} from '../../hooks/useGithubContributorsCount';
+import Icon from '../../components/ui/Icon';
 import styles from '../index.module.css';
 
 export default function StatsSection() {
@@ -9,10 +10,10 @@ export default function StatsSection() {
   });
 
   const stats = [
-    { label: 'Open Source', value: 'MIT', icon: '📜' },
-    { label: 'Diamond Standard', value: 'ERC-2535', icon: '💎' },
-    { label: 'Contributors', value: contributorsValue, icon: '👥' },
-    { label: 'Built with Love', value: 'Community', icon: '🩵' },
+    { label: 'Open Source', value: 'MIT', icon: 'scroll' },
+    { label: 'Diamond Standard', value: 'ERC-2535', icon: 'diamond' },
+    { label: 'Contributors', value: contributorsValue, icon: 'star' },
+    { label: 'Built with Love', value: 'Community', icon: 'heart' },
   ];
 
   return (
@@ -21,7 +22,9 @@ export default function StatsSection() {
         <div className={styles.statsGrid}>
           {stats.map((stat, idx) => (
             <div key={idx} className={styles.statCard}>
-              <div className={styles.statIcon}>{stat.icon}</div>
+              <div className={styles.statIcon}>
+                <Icon name={stat.icon} size={32} />
+              </div>
               <div className={styles.statValue}>{stat.value}</div>
               <div className={styles.statLabel}>{stat.label}</div>
             </div>
@@ -31,6 +34,3 @@ export default function StatsSection() {
     </section>
   );
 }
-
-
-

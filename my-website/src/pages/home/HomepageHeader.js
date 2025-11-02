@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Heading from '@theme/Heading';
 import GitHubStarButton from '@site/src/components/navigation/GitHubStarButton';
+import Icon from '../../components/ui/Icon';
 import styles from '../index.module.css';
 
 export default function HomepageHeader() {
@@ -17,7 +18,7 @@ export default function HomepageHeader() {
         <div className={styles.heroContent}>
           <div className={styles.badgeWrapper}>
             <span className={styles.badge}>
-              ⚠️ Early Stage - Not Production Ready
+              <Icon name="warning" size={20} /> Early Stage - Not Production Ready
             </span>
           </div>
           <Heading as="h1" className={styles.heroTitle}>

@@ -958,28 +958,28 @@ Navigation cards for linking to documentation pages.
     title="Getting Started"
     description="Learn the basics and create your first integration in under 10 minutes"
     href="/docs/getting-started"
-    icon="🚀"
+    icon={<Icon name="rocket" size={32} />}
     variant="primary"
   />
   <DocCard
     title="API Reference"
     description="Complete API documentation with examples and best practices"
     href="/docs/api"
-    icon="📚"
+    icon={<Icon name="books" size={32} />}
     variant="default"
   />
   <DocCard
     title="Tutorials"
     description="Step-by-step guides for common use cases and patterns"
     href="/docs/tutorials"
-    icon="🎓"
+    icon={<Icon name="graduation" size={32} />}
     variant="secondary"
   />
   <DocCard
     title="Examples"
     description="Real-world code examples and implementation patterns"
     href="/docs/examples"
-    icon="💡"
+    icon={<Icon name="lightbulb" size={32} />}
     variant="default"
   />
 </DocCardGrid>
@@ -1003,14 +1003,14 @@ Navigation cards for linking to documentation pages.
   title="Guide Title"
   description="Guide description"
   href="/docs/guide"
-  icon="📖"
+  icon={<Icon name="book" size={28} />}
   variant="primary"
 />
 
 <DocCardGrid columns={3}>
-  <DocCard title="Guide 1" href="/guide1" icon="📖" />
-  <DocCard title="Guide 2" href="/guide2" icon="🔧" />
-  <DocCard title="Guide 3" href="/guide3" icon="⚡" />
+  <DocCard title="Guide 1" href="/guide1" icon={<Icon name="book" size={28} />} />
+  <DocCard title="Guide 2" href="/guide2" icon={<Icon name="wrench" size={28} />} />
+  <DocCard title="Guide 3" href="/guide3" icon={<Icon name="lightning" size={28} />} />
 </DocCardGrid>
 ```
 
@@ -1040,32 +1040,32 @@ Responsive grid layout for displaying features.
 
 <FeatureGrid columns={3}>
   <FeatureGridItem
-    icon="⚡"
+    icon={<Icon name="lightning" size={28} />}
     title="Lightning Fast"
     description="Optimized for speed with sub-100ms response times"
   />
   <FeatureGridItem
-    icon="🔒"
+    icon={<Icon name="padlock" size={32} />}
     title="Secure"
     description="Enterprise-grade security with end-to-end encryption"
   />
   <FeatureGridItem
-    icon="📈"
+    icon={<Icon name="chart" size={32} />}
     title="Scalable"
     description="Grows with your needs from startup to enterprise"
   />
   <FeatureGridItem
-    icon="🎯"
+    icon={<Icon name="target" size={32} />}
     title="Accurate"
     description="Precision targeting with 99.9% accuracy rate"
   />
   <FeatureGridItem
-    icon="🌐"
+    icon={<Icon name="globe" size={32} />}
     title="Global"
     description="Available in 150+ countries worldwide"
   />
   <FeatureGridItem
-    icon="💡"
+    icon={<Icon name="lightbulb" size={32} />}
     title="Easy to Use"
     description="Intuitive API with comprehensive documentation"
   />
@@ -1092,12 +1092,12 @@ Responsive grid layout for displaying features.
 ```jsx
 <FeatureGrid columns={3}>
   <FeatureGridItem
-    icon="⚡"
+    icon={<Icon name="lightning" size={28} />}
     title="Fast"
     description="Lightning fast performance"
   />
   <FeatureGridItem
-    icon="🔒"
+    icon={<Icon name="padlock" size={32} />}
     title="Secure"
     description="Bank-level security"
   />
@@ -1130,19 +1130,19 @@ Animated feature card with gradient effects and hover animations.
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '2rem'}}>
   <FeatureCard
-    icon="🎯"
+    icon={<Icon name="target" size={32} />}
     title="Precise Targeting"
     description="Target your audience with laser precision using advanced AI algorithms"
     gradient="gradientBlue"
   />
   <FeatureCard
-    icon="💎"
+    icon={<Icon name="diamond" size={32} />}
     title="Premium Quality"
     description="Enterprise-grade quality with 99.99% uptime guarantee"
     gradient="gradientPurple"
   />
   <FeatureCard
-    icon="🔧"
+    icon={<Icon name="wrench" size={28} />}
     title="Easy Integration"
     description="Integrate in minutes with our simple SDK and comprehensive docs"
     gradient="gradientPink"
@@ -1163,7 +1163,7 @@ Animated feature card with gradient effects and hover animations.
 
 ```jsx
 <FeatureCard
-  icon="🎯"
+  icon={<Icon name="target" size={32} />}
   title="Feature Title"
   description="Feature description"
   gradient="gradientBlue"
@@ -1238,24 +1238,24 @@ Display statistics and metrics with optional trend indicators.
   <MetricCard
     value="1,234"
     label="Active Users"
-    icon="👥"
+    icon={<Icon name="users" size={32} />}
     trend={{ direction: 'up', value: '12%' }}
   />
   <MetricCard
     value="99.9%"
     label="Uptime"
-    icon="⚡"
+    icon={<Icon name="lightning" size={28} />}
     trend={{ direction: 'up', value: '0.1%' }}
   />
   <MetricCard
     value="150+"
     label="Countries"
-    icon="🌐"
+    icon={<Icon name="globe" size={32} />}
   />
   <MetricCard
     value="< 100ms"
     label="Response Time"
-    icon="🚀"
+    icon={<Icon name="rocket" size={32} />}
     trend={{ direction: 'down', value: '15%' }}
   />
 </div>
@@ -1275,7 +1275,7 @@ Display statistics and metrics with optional trend indicators.
 <MetricCard
   value="1,234"
   label="Users"
-  icon="👥"
+  icon={<Icon name="users" size={32} />}
   trend={{ direction: 'up', value: '12%' }}
 />
 ```
