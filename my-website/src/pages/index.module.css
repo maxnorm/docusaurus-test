@@ -415,7 +415,7 @@
 
 .showcaseGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
   max-width: 1400px;
@@ -424,6 +424,10 @@
 
 .showcaseContent {
   padding: 0 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .showcaseBadge {
@@ -461,6 +465,8 @@
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 .showcaseFeature {
@@ -472,6 +478,7 @@
   border: 1px solid #e2e8f0;
   border-radius: 1rem;
   transition: all 0.25s ease;
+  text-align: left;
 }
 
 .showcaseFeature:hover {
@@ -603,6 +610,26 @@
   overflow-x: auto;
   background: #1e293b;
   white-space: pre;
+  max-width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #475569 #1e293b;
+}
+
+.codeWindowContent::-webkit-scrollbar {
+  height: 8px;
+}
+
+.codeWindowContent::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.codeWindowContent::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.codeWindowContent::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
 }
 
 /* ========================================
@@ -903,6 +930,10 @@
     gap: 2.5rem;
   }
 
+  .showcaseContent {
+    padding: 0 1.5rem;
+  }
+
   .showcaseTitle {
     font-size: 1.875rem;
   }
@@ -938,9 +969,18 @@
     font-size: 0.875rem;
   }
 
+  .showcaseCode {
+    padding: 0 1rem;
+  }
+
+  .codeWindow {
+    max-width: 100%;
+  }
+
   .codeWindowContent {
     padding: 1.5rem;
     font-size: 0.8125rem;
+    line-height: 1.6;
   }
 
   .statsSection {
@@ -1022,8 +1062,52 @@
     font-size: 1.75rem;
   }
 
+  .showcaseSection {
+    padding: 3rem 0;
+  }
+
+  .showcaseContent {
+    padding: 0 1rem;
+  }
+
   .showcaseTitle {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
+  }
+
+  .showcaseDescription {
+    font-size: 0.9375rem;
+  }
+
+  .showcaseBadge {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.875rem;
+  }
+
+  .showcaseCode {
+    padding: 0 0.5rem;
+  }
+
+  .codeWindow {
+    border-radius: 1rem;
+  }
+
+  .codeWindowHeader {
+    padding: 0.75rem 1rem;
+  }
+
+  .codeWindowTitle {
+    font-size: 0.75rem;
+  }
+
+  .codeWindowDots span {
+    width: 10px;
+    height: 10px;
+  }
+
+  .codeWindowContent {
+    font-size: 0.75rem;
+    padding: 1rem;
+    line-height: 1.5;
   }
 
   .featuresGrid {
@@ -1041,11 +1125,6 @@
 
   .ctaContent {
     padding: 2.5rem 1.25rem;
-  }
-
-  .codeWindowContent {
-    font-size: 0.75rem;
-    padding: 1.25rem;
   }
 }
 
