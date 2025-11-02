@@ -4,7 +4,10 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+import dotenv from 'dotenv';
 import {themes as prismThemes} from 'prism-react-renderer';
+
+dotenv.config();
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -41,6 +44,17 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  // Custom head tags (meta tags, etc.)
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'algolia-site-verification',
+        content: '7742A5A0022761B1',
+      },
+    },
+  ],
 
   presets: [
     [
@@ -196,12 +210,9 @@ const config = {
         additionalLanguages: ['solidity'],
       },
       algolia: {
-        // The application ID provided by Algolia
-        appId: 'YOUR_APP_ID',
-        // Public API key: it is safe to commit it
-        apiKey: 'YOUR_SEARCH_API_KEY',
-        indexName: 'compose',
-        // Optional: see doc section below
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME || 'compose',
         contextualSearch: true,
       },
     }),
