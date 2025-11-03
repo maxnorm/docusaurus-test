@@ -10,7 +10,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} - Smart Contract Development`}
+      title={`${siteConfig.title} - Smart Contract Library`}
       description="Compose is a smart contract library for ERC-2535 Diamonds. Build readable, composable smart contracts with on-chain standard library facets.">
       <HomepageHeader />
       <main>
