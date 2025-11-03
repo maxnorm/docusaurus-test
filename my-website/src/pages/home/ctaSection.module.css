@@ -31,6 +31,8 @@
 /* Dark mode */
 [data-theme='dark'] .ctaSection { background: var(--compose-bg-900); }
 [data-theme='dark'] .ctaContent { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); }
+[data-theme='dark'] .ctaTitle { color: #ffffff; }
+[data-theme='dark'] .ctaDescription { color: rgba(255,255,255,0.7); }
 [data-theme='dark'] .ctaSecondaryLight { background: rgba(255,255,255,0.05); color: #ffffff; border: 2px solid rgba(255,255,255,0.15); }
 [data-theme='dark'] .ctaSecondaryLight:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: #ffffff; }
 

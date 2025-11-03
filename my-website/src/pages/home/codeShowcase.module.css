@@ -80,6 +80,8 @@
 
 /* Dark mode */
 [data-theme='dark'] .showcaseSection { background: var(--compose-bg-900); }
+[data-theme='dark'] .showcaseTitle { color: #ffffff; }
+[data-theme='dark'] .showcaseDescription { color: rgba(255,255,255,0.7); }
 [data-theme='dark'] .showcaseFeature { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); }
 [data-theme='dark'] .showcaseFeature:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.15); }
 [data-theme='dark'] .showcaseFeature h4 { color: #ffffff; }
