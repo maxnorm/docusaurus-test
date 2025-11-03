@@ -12,7 +12,7 @@ export default function StatsSection() {
   const stats = [
     { label: 'Open Source', value: 'MIT', icon: 'scroll' },
     { label: 'Diamond Standard', value: 'ERC-2535', icon: 'diamond' },
-    { label: 'Contributors', value: contributorsValue, icon: 'star' },
+    { label: 'Contributors', value: contributorsValue, icon: 'community' },
     { label: 'Built with Love', value: 'Community', icon: 'heart' },
   ];
 

@@ -1,9 +1,15 @@
 <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 width="24" height="24" viewBox="0 0 32 32" xml:space="preserve">
+    <defs>
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
+        </linearGradient>
+    </defs>
 <style type="text/css">
-	.rocket_body{fill:#DC2626;}
-	.rocket_flame{fill:#FFA500;}
-	.rocket_detail{fill:#FBBF24;}
+	.rocket_body{fill:url(#blueGradient);}
+	.rocket_flame{fill:url(#blueGradient);}
+	.rocket_detail{fill:url(#blueGradient);}
 </style>
 <path class="rocket_body" d="M30.43,1.484C28.488-0.458,19.154-1.42,14.123,3.61c-1.499,1.499-2.653,2.806-3.588,4.062
 	c-1.836-0.335-3.524,0.215-4.92,1.61L2.07,12.827c-0.392,0.392-0.392,1.027,0,1.418l1.422,1.422c0.392,0.392,1.027,0.392,1.418,0
