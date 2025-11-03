@@ -925,26 +925,59 @@
     padding: 5rem 0;
   }
 
+  /* Center container on tablets */
+  .showcaseSection .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
   .showcaseGrid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+    justify-items: center;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .showcaseContent {
     padding: 0 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .showcaseTitle {
     font-size: 1.875rem;
+    text-align: center;
   }
 
   .showcaseDescription {
     font-size: 1rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   .showcaseFeatures {
     gap: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showcaseLink {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .showcaseFeature {
@@ -971,10 +1004,17 @@
 
   .showcaseCode {
     padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   .codeWindow {
     max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .codeWindowContent {
@@ -1066,29 +1106,89 @@
     padding: 3rem 0;
   }
 
+  /* Override Docusaurus container padding on mobile for proper centering */
+  .showcaseSection .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .showcaseGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
   .showcaseContent {
     padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .showcaseTitle {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   .showcaseDescription {
     font-size: 0.9375rem;
+    text-align: center;
+  }
+
+  .showcaseFeatures {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showcaseFeature {
+    width: 100%;
+    max-width: calc(100% - 2rem);
   }
 
   .showcaseBadge {
     font-size: 0.75rem;
     padding: 0.375rem 0.875rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .showcaseLink {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .showcaseCode {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   .codeWindow {
     border-radius: 1rem;
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+    margin: 0 auto;
   }
 
   .codeWindowHeader {
@@ -1125,6 +1225,38 @@
 
   .ctaContent {
     padding: 2.5rem 1.25rem;
+  }
+}
+
+/* Ultra-small devices (≤400px) - Extra centering for iPhones */
+@media screen and (max-width: 400px) {
+  .showcaseSection .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .showcaseGrid {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .showcaseContent {
+    width: 100%;
+    padding: 0 0.75rem;
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .showcaseCode {
+    width: 100%;
+    padding: 0 0.75rem;
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .codeWindow {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
