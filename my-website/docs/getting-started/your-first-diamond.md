@@ -359,10 +359,10 @@ contract MyDiamondTest is Test {
 
 You now understand how to build a diamond from scratch! Continue learning:
 
-- **[Core Concepts: Facets and Libraries](/docs/core-concepts/facets-and-libraries)** - Deep dive into the architecture
-- **[Available Facets](/docs/api/overview)** - Explore what Compose provides
-- **[Creating Custom Facets](/docs/guides/creating-custom-facets)** - Build your own facets
-- **[Upgrading Diamonds](/docs/guides/upgrading-diamonds)** - Learn about diamond cuts
+- **[Core Concepts: Facets and Libraries](/)** - Deep dive into the architecture
+- **[Available Facets](/)** - Explore what Compose provides
+- **[Creating Custom Facets](/)** - Build your own facets
+- **[Upgrading Diamonds](/)** - Learn about diamond cuts
 
 :::tip Pro Tip
 In production, consider using a multi-sig wallet or DAO for the diamond owner to ensure secure upgrades.

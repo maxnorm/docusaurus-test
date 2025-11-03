@@ -237,9 +237,9 @@ Your diamond now has:
 
 Congratulations! 🎉 You've created your first Compose diamond. Now:
 
-- **[Learn Core Concepts](/docs/core-concepts/facets-and-libraries)** - Understand the architecture deeply
-- **[Explore Available Facets](/docs/api/overview)** - See what else you can add
-- **[Custom Facets](/docs/guides/creating-custom-facets)** - Build your own facets
+- **[Learn Core Concepts](/)** - Understand the architecture deeply
+- **[Explore Available Facets](/)** - See what else you can add
+- **[Custom Facets](/)** - Build your own facets
 - **[Best Practices](/docs/advanced/best-practices)** - Write production-ready code
 
 ## Common Issues

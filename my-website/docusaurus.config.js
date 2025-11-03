@@ -162,11 +162,11 @@ const config = {
               },
               {
                 label: 'Examples',
-                to: '/docs/examples',
+                to: '/',
               },
               {
                 label: 'API Reference',
-                to: '/docs/api',
+                to: '/',
               },
             ],
           },
