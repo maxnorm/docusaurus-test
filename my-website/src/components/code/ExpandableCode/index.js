@@ -39,12 +39,18 @@ export default function ExpandableCode({
             styles.codeBlock,
             !isExpanded && needsExpansion && styles.codeBlockCollapsed
           )}
+          style={{
+            '--max-lines': maxLines,
+          }}
         >
           <code className={`language-${language}`}>{codeContent}</code>
         </pre>
         {needsExpansion && (
           <button
-            className={styles.expandButton}
+            className={clsx(
+              styles.expandButton,
+              isExpanded && styles.expandButtonExpanded
+            )}
             onClick={() => setIsExpanded(!isExpanded)}
             aria-label={isExpanded ? 'Collapse code' : 'Expand code'}
           >
