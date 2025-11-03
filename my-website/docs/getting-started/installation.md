@@ -115,7 +115,7 @@ Now that you have Compose installed, let's understand the core concepts:
 
 Having trouble with installation?
 
-- Check the **[FAQ](/docs/guides/faq)**
+- Check the **[FAQ](/)**
 - Ask in **[Discord](https://discord.gg/compose)**
 - Open an **[issue on GitHub](https://github.com/Perfect-Abstractions/Compose/issues)**
 

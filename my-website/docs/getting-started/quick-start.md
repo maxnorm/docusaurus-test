@@ -240,7 +240,7 @@ Congratulations! 🎉 You've created your first Compose diamond. Now:
 - **[Learn Core Concepts](/)** - Understand the architecture deeply
 - **[Explore Available Facets](/)** - See what else you can add
 - **[Custom Facets](/)** - Build your own facets
-- **[Best Practices](/docs/advanced/best-practices)** - Write production-ready code
+- **[Best Practices](/)** - Write production-ready code
 
 ## Common Issues
 
@@ -258,6 +258,6 @@ Check that:
 ### Need Help?
 
 - 💬 **[Join Discord](https://discord.gg/compose)** - Get immediate help
-- 📚 **[Read FAQ](/docs/guides/faq)** - Common questions answered
+- 📚 **[Read FAQ](/)** - Common questions answered
 - 🐛 **[Report Issues](https://github.com/Perfect-Abstractions/Compose/issues)** - Found a bug?
 
