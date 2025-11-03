@@ -65,7 +65,10 @@
 
 .codeBlock {
   margin: 0 !important;
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   padding: 1.25rem 1.25rem 0 1.25rem !important;
   padding-bottom: 0 !important;
   background: #f8fafc;
@@ -89,7 +92,7 @@
 
 .codeBlock code {
   font-family: var(--ifm-font-family-monospace);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.6;
   margin: 0 !important;
   padding: 0 !important;

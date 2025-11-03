@@ -133,7 +133,7 @@
 
 /* Code blocks */
 .markdown pre {
-  margin: 1.5rem 0 !important;
+  margin: 0 !important;
   border-radius: 0.75rem !important;
   background: #f8fafc !important;
   border: none !important;
@@ -146,6 +146,7 @@
   background: #1a1a1a !important;
   border: none !important;
   outline: none !important;
+  margin: 0 !important;
   padding: 1.25rem !important;
   border-radius: 0.75rem !important;
 }

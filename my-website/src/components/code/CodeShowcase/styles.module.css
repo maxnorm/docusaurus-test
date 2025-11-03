@@ -55,7 +55,7 @@
 .tabBar {
   display: flex;
   gap: 0;
-  background: #2d3748;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   border-top: 1px solid #1a202c;
   border-bottom: 1px solid #1a202c;
   padding: 0;
@@ -64,7 +64,7 @@
 }
 
 [data-theme='light'] .tabBar {
-  background: #f1f5f9;
+  background: linear-gradient(135deg, var(--ifm-color-emphasis-100) 0%, var(--ifm-color-emphasis-50) 100%);
   border-top-color: #e2e8f0;
   border-bottom-color: #cbd5e1;
 }

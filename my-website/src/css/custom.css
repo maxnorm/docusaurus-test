@@ -240,7 +240,7 @@ div[class*="codeBlockLines"] {
   background: #1a1a1a !important;
   border: none !important;
   outline: none !important;
-  margin: 1.5rem 0 !important;
+  margin: 0 !important;
   padding: 1.25rem !important;
   border-radius: 0.75rem !important;
 }
@@ -446,7 +446,7 @@ pre[class*="language-"] {
   background: #f8fafc !important;
   border: none !important;
   outline: none !important;
-  margin: 1.5rem 0 !important;
+  margin: 0 !important;
   padding: 1.25rem !important;
   border-radius: 0.75rem !important;
 }
@@ -680,7 +680,7 @@ pre[class*="language-"],
   border: none !important;
   outline: none !important;
   background: #f8fafc !important;
-  margin: 1.5rem 0 !important;
+  margin: 0 !important;
   padding: 1.25rem !important;
 }
 
