@@ -66,8 +66,8 @@
   transform: rotate(180deg);
 }
 
-/* Hide status badge on mobile */
-@media (max-width: 996px) {
+/* Hide status badge until 1094px */
+@media (max-width: 1093px) {
   .statusBadge {
     display: none !important;
   }
