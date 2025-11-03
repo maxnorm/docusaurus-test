@@ -42,7 +42,7 @@ export default function HomepageHeader() {
             </Link>
             <Link
               className={clsx(styles.ctaButton, styles.ctaSecondary)}
-              to="/docs/foundations">
+              to="/">
               <span>Learn Core Concepts</span>
             </Link>
           </div>

@@ -2,81 +2,81 @@
    HERO SECTION
    ======================================== */
 
-.heroBanner {
+:where(.heroBanner) {
   position: relative;
   padding: 6rem 0 14rem;
   overflow: hidden;
   min-height: auto;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(180deg, var(--hero-bg-start) 0%, var(--hero-bg-end) 100%);
 }
 
-.heroBackground {
+:where(.heroBackground) {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-.heroGradient {
+:where(.heroGradient) {
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.25), transparent),
-    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(37, 99, 235, 0.15), transparent),
-    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(96, 165, 250, 0.15), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--hero-accent-1), transparent),
+    radial-gradient(ellipse 60% 50% at 20% 80%, var(--hero-accent-2), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 80%, var(--hero-accent-3), transparent);
 }
 
-.heroPattern {
+:where(.heroPattern) {
   position: absolute;
   inset: 0;
   opacity: 0.05;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    linear-gradient(to right, var(--hero-pattern-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--hero-pattern-line) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
-.heroContainer {
+:where(.heroContainer) {
   position: relative;
   z-index: 1;
 }
 
-.heroContent {
+:where(.heroContent) {
   max-width: 880px;
   margin: 0 auto;
   text-align: center;
 }
 
-.badgeWrapper {
+:where(.badgeWrapper) {
   margin-bottom: 1.5rem;
   animation: fadeInDown 0.8s ease-out;
 }
 
-.badge {
+:where(.badge) {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--hero-surface-glass);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--hero-border-weaker);
   border-radius: 9999px;
-  color: rgba(255, 255, 255, 0.95);
+  color: var(--hero-text-medium);
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.025em;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-lg);
 }
 
-.badgePulse {
+:where(.badgePulse) {
   position: absolute;
   left: 1.25rem;
   width: 8px;
   height: 8px;
-  background: #ef4444;
+  background: var(--hero-pulse);
   border-radius: 50%;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
@@ -92,43 +92,43 @@
   }
 }
 
-.heroTitle {
+:where(.heroTitle) {
   font-size: clamp(3rem, 8vw, 5rem);
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.04em;
-  color: white;
+  color: var(--hero-text-strong);
   margin-bottom: 1rem;
   animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-.heroTitleGradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+:where(.heroTitleGradient) {
+  background: var(--hero-gradient-alt);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
 }
 
-.heroSubtitle {
+:where(.heroSubtitle) {
   font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--hero-text-medium);
   font-weight: 500;
   line-height: 1.6;
   margin-bottom: 1rem;
   animation: fadeInUp 0.8s ease-out 0.3s both;
 }
 
-.heroDescription {
+:where(.heroDescription) {
   font-size: clamp(1rem, 2vw, 1.125rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--hero-text-weak);
   line-height: 1.8;
   max-width: 720px;
   margin: 0 auto 2rem;
   animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
-.heroCta {
+:where(.heroCta) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,7 +138,7 @@
   animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
-.ctaButton {
+:where(.ctaButton) {
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
@@ -152,35 +152,31 @@
   white-space: nowrap;
 }
 
-.ctaPrimary {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-  color: white;
-  box-shadow: 
-    0 4px 14px rgba(59, 130, 246, 0.4),
-    0 1px 3px rgba(0, 0, 0, 0.12);
+:where(.ctaPrimary) {
+  background: var(--hero-gradient);
+  color: var(--hero-text-strong);
+  box-shadow: var(--shadow-md);
 }
 
-.ctaPrimary:hover {
+:where(.ctaPrimary:hover) {
   transform: translateY(-2px);
-  box-shadow: 
-    0 8px 24px rgba(59, 130, 246, 0.5),
-    0 4px 8px rgba(0, 0, 0, 0.12);
-  color: white;
+  box-shadow: var(--shadow-lg);
+  color: var(--hero-text-strong);
 }
 
-.ctaSecondary {
-  background: rgba(255, 255, 255, 0.05);
+:where(.ctaSecondary) {
+  background: var(--hero-surface-glass);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: var(--hero-text-strong);
+  border: 2px solid var(--hero-border-weak);
 }
 
-.ctaSecondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.3);
+:where(.ctaSecondary:hover) {
+  background: color-mix(in oklab, var(--hero-surface-glass) 60%, white);
+  border-color: color-mix(in oklab, var(--hero-border-weak) 50%, white);
   transform: translateY(-2px);
-  color: white;
+  color: var(--hero-text-strong);
 }
 
 /* Secondary button for light backgrounds */

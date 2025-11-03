@@ -55,6 +55,27 @@
   --hero-gradient: linear-gradient(135deg, var(--compose-primary-500) 0%, #1e40af 100%);
   --hero-gradient-alt: linear-gradient(135deg, #60a5fa 0%, var(--compose-primary-600) 100%);
 
+  /* Homepage hero tokens */
+  --hero-bg-start: #0f172a;
+  --hero-bg-end: #1e293b;
+  --hero-accent-1: rgba(59, 130, 246, 0.25);
+  --hero-accent-2: rgba(37, 99, 235, 0.15);
+  --hero-accent-3: rgba(96, 165, 250, 0.15);
+  --hero-text-strong: rgba(255, 255, 255, 1);
+  --hero-text-medium: rgba(255, 255, 255, 0.85);
+  --hero-text-weak: rgba(255, 255, 255, 0.7);
+  --hero-surface-glass: rgba(255, 255, 255, 0.05);
+  --hero-border-weak: rgba(255, 255, 255, 0.15);
+  --hero-border-weaker: rgba(255, 255, 255, 0.1);
+  --hero-pattern-line: rgba(255, 255, 255, 0.1);
+  --hero-pulse: #ef4444;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.25);
+
   /* Motion & focus tokens */
   --motion-duration-fast: 150ms;
   --motion-duration-normal: 250ms;
@@ -112,6 +133,17 @@
   /* Hero gradient - dark blue */
   --hero-gradient: linear-gradient(135deg, var(--compose-bg-900) 0%, var(--compose-bg-800) 100%);
   --hero-gradient-alt: linear-gradient(135deg, var(--compose-bg-800) 0%, #334155 100%);
+
+  /* Homepage hero tokens (dark overrides if needed) */
+  --hero-bg-start: #0f172a;
+  --hero-bg-end: #1e293b;
+  --hero-text-strong: rgba(255, 255, 255, 1);
+  --hero-text-medium: rgba(255, 255, 255, 0.9);
+  --hero-text-weak: rgba(255, 255, 255, 0.75);
+  --hero-surface-glass: rgba(255, 255, 255, 0.06);
+  --hero-border-weak: rgba(255, 255, 255, 0.22);
+  --hero-border-weaker: rgba(255, 255, 255, 0.12);
+  --hero-pattern-line: rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
@@ -163,7 +195,7 @@ main {
 
 /* Markdown headings */
 .markdown h1 {
-  background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  background: var(--hero-gradient-alt);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

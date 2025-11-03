@@ -107,7 +107,7 @@ You should see output indicating all tests pass.
 
 Now that you have Compose installed, let's understand the core concepts:
 
-- **[Core Concepts](/docs/foundations)** - Learn about facets, libraries, and shared storage
+- **[Core Concepts](/)** - Learn about facets, libraries, and shared storage
 - **[Quick Start Guide](/docs/getting-started/quick-start)** - Jump right in with a working example
 - **[Your First Diamond](/docs/getting-started/your-first-diamond)** - Build a simple diamond with Compose facets
 

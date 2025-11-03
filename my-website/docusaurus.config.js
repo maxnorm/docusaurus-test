@@ -29,9 +29,15 @@ const config = {
   baseUrl: '/',
 
 
-  // This will throw an error if there are broken links or markdown links
+  // Broken link handling
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
+
+  // Docusaurus v4-compatible location for broken Markdown links
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
 
   // plugins: [],
 
