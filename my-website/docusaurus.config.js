@@ -28,10 +28,6 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'maxnorm', // Usually your GitHub org/user name.
-  projectName: 'docusaurus-test', // Usually your repo name.
 
   onBrokenLinks: 'warn',
 
@@ -200,7 +196,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Made with 🩵 by the Compose Community.<br/>
+        copyright: `Made with DELEGATECALL by the Compose Community.<br/>
           Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
