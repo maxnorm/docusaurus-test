@@ -173,8 +173,20 @@
 .heroLink:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: white; transform: translateY(-1px); }
 .heroLink svg { flex-shrink: 0; opacity: 0.9; }
 
-.heroWave { position: absolute; bottom: -1px; left: 0; width: 100%; color: white; z-index: 1; }
-.heroWave svg { display: block; width: 100%; height: auto; }
+.heroWave { 
+  position: absolute; 
+  bottom: -1px; 
+  left: 0; 
+  width: 100%; 
+  color: #ffffff; 
+  z-index: 1; 
+}
+.heroWave svg { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+  fill: currentColor;
+}
 
 /* Animations */
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -201,7 +213,9 @@
   .badge { font-size: 0.8125rem; padding: 0.625rem 1.25rem; }
 }
 
-/* Dark tweaks */
-[data-theme='dark'] .heroWave { color: var(--compose-bg-900); }
+/* Theme-specific wave colors to match section below */
+[data-theme='dark'] .heroWave { 
+  color: var(--compose-bg-900); 
+}
 
 
