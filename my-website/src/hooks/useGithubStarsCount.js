@@ -1,20 +1,35 @@
 import {useEffect, useState} from 'react';
+import {useSessionStorage} from './useSessionStorage';
 
 /**
  * Fetch the star count for a GitHub repository.
  * Uses the GitHub API /repos/{owner}/{repo} endpoint.
+ * Caches result in sessionStorage to avoid refetching during the same session.
  */
 export function useGithubStarsCount({
   owner,
   repo,
   defaultValue = '0',
 }) {
-  const [value, setValue] = useState(String(defaultValue));
-  const [count, setCount] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const cacheKey = `github_stars_${owner}_${repo}`;
+  const [cachedValue, setCachedValue] = useSessionStorage(cacheKey, null);
+  
+  const [value, setValue] = useState(() => {
+    return cachedValue ? String(cachedValue) : String(defaultValue);
+  });
+  const [count, setCount] = useState(cachedValue);
+  const [isLoading, setIsLoading] = useState(!cachedValue);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // If we have a cached value, use it and skip fetch
+    if (cachedValue !== null) {
+      setValue(String(cachedValue));
+      setCount(cachedValue);
+      setIsLoading(false);
+      return;
+    }
+
     let isMounted = true;
 
     async function fetchStarsCount() {
@@ -34,6 +49,7 @@ export function useGithubStarsCount({
           if (Number.isFinite(starsCount)) {
             setCount(starsCount);
             setValue(String(starsCount));
+            setCachedValue(starsCount);
           }
         }
       } catch (e) {
@@ -47,7 +63,7 @@ export function useGithubStarsCount({
     return () => {
       isMounted = false;
     };
-  }, [owner, repo, defaultValue]);
+  }, [owner, repo, defaultValue, cachedValue, setCachedValue]);
 
   return {value, count, isLoading, error};
 }

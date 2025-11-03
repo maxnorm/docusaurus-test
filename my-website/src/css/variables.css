@@ -45,9 +45,21 @@
   --ifm-global-radius: 0.5rem;
   --ifm-button-border-radius: 0.5rem;
   
+  /* Brand tokens for homepage sections */
+  --compose-bg-900: #0f172a; /* dark navy */
+  --compose-bg-800: #1e293b; /* slate */
+  --compose-primary-500: #3b82f6; /* ifm primary */
+  --compose-primary-600: #2563eb;
+
   /* Hero gradient - Blue focused */
-  --hero-gradient: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-  --hero-gradient-alt: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+  --hero-gradient: linear-gradient(135deg, var(--compose-primary-500) 0%, #1e40af 100%);
+  --hero-gradient-alt: linear-gradient(135deg, #60a5fa 0%, var(--compose-primary-600) 100%);
+
+  /* Motion & focus tokens */
+  --motion-duration-fast: 150ms;
+  --motion-duration-normal: 250ms;
+  --motion-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --focus-ring-color: var(--compose-primary-500);
 }
 
 /* Dark mode palette - MoneyKit inspired dark theme */
@@ -91,9 +103,15 @@
   --ifm-code-background: #1e293b;
   --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.15);
   
+  /* Brand tokens (dark) */
+  --compose-bg-900: #0f172a;
+  --compose-bg-800: #1e293b;
+  --compose-primary-500: #60a5fa;
+  --compose-primary-600: #3b82f6;
+
   /* Hero gradient - dark blue */
-  --hero-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  --hero-gradient-alt: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --hero-gradient: linear-gradient(135deg, var(--compose-bg-900) 0%, var(--compose-bg-800) 100%);
+  --hero-gradient-alt: linear-gradient(135deg, var(--compose-bg-800) 0%, #334155 100%);
 }
 
 /* ============================================
@@ -179,6 +197,15 @@ main {
 
 [data-theme='dark'] .theme-doc-markdown a:hover {
   color: #93c5fd;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 

@@ -1,6 +1,6 @@
 import {useGithubContributorsCount} from '../../hooks/useGithubContributorsCount';
 import Icon from '../../components/ui/Icon';
-import styles from '../index.module.css';
+import styles from './statsSection.module.css';
 
 export default function StatsSection() {
   const {value: contributorsValue} = useGithubContributorsCount({

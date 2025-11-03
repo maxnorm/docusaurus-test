@@ -1,6 +1,6 @@
 import Heading from '@theme/Heading';
 import Icon from '../../components/ui/Icon';
-import styles from '../index.module.css';
+import styles from './featuresSection.module.css';
 
 export default function FeaturesSection() {
   const features = [
@@ -50,8 +50,8 @@ export default function FeaturesSection() {
           </p>
         </div>
         <div className={styles.featuresGrid}>
-          {features.map((feature, idx) => (
-            <div key={idx} className={styles.featureCard}>
+          {features.map((feature) => (
+            <div key={feature.title} className={styles.featureCard}>
               <div className={styles.featureIcon}>
                 <Icon name={feature.icon} size={32} />
               </div>

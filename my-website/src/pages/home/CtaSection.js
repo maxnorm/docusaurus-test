@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
-import styles from '../index.module.css';
+import Icon from '../../components/ui/Icon';
+import styles from './ctaSection.module.css';
 
 export default function CtaSection() {
   return (
@@ -17,9 +18,7 @@ export default function CtaSection() {
           <div className={styles.ctaButtons}>
             <Link to="/docs" className={clsx(styles.ctaButton, styles.ctaPrimary)}>
               <span>Get Started</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <Icon name="arrow-right" size={20} />
             </Link>
             <Link to="/docs/getting-started/quick-start" className={clsx(styles.ctaButton, styles.ctaSecondaryLight)}>
               <span>View Quick Start</span>

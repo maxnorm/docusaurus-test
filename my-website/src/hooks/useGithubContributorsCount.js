@@ -1,8 +1,10 @@
 import {useEffect, useState} from 'react';
+import {useSessionStorage} from './useSessionStorage';
 
 /**
  * Fetch the contributors count for a GitHub repository.
  * Uses the Link header trick with per_page=1 to infer total pages as count.
+ * Caches result in sessionStorage to avoid refetching during the same session.
  */
 export function useGithubContributorsCount({
   owner,
@@ -10,12 +12,25 @@ export function useGithubContributorsCount({
   defaultValue = '0',
   includeAnonymous = true,
 }) {
-  const [value, setValue] = useState(String(defaultValue));
-  const [count, setCount] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const cacheKey = `github_contributors_${owner}_${repo}_${includeAnonymous}`;
+  const [cachedValue, setCachedValue] = useSessionStorage(cacheKey, null);
+  
+  const [value, setValue] = useState(() => {
+    return cachedValue ? String(cachedValue) : String(defaultValue);
+  });
+  const [count, setCount] = useState(cachedValue);
+  const [isLoading, setIsLoading] = useState(!cachedValue);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // If we have a cached value, use it and skip fetch
+    if (cachedValue !== null) {
+      setValue(String(cachedValue));
+      setCount(cachedValue);
+      setIsLoading(false);
+      return;
+    }
+
     let isMounted = true;
 
     async function fetchContributorsCount() {
@@ -39,6 +54,7 @@ export function useGithubContributorsCount({
             if (Number.isFinite(inferredCount) && isMounted) {
               setCount(inferredCount);
               setValue(String(inferredCount));
+              setCachedValue(inferredCount);
               setIsLoading(false);
               return;
             }
@@ -51,6 +67,7 @@ export function useGithubContributorsCount({
           if (Number.isFinite(fallbackCount)) {
             setCount(fallbackCount);
             setValue(String(fallbackCount));
+            setCachedValue(fallbackCount);
           }
         }
       } catch (e) {
@@ -64,7 +81,7 @@ export function useGithubContributorsCount({
     return () => {
       isMounted = false;
     };
-  }, [owner, repo, includeAnonymous, defaultValue]);
+  }, [owner, repo, includeAnonymous, defaultValue, cachedValue, setCachedValue]);
 
   return {value, count, isLoading, error};
 }

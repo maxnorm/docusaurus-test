@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Icon from '../../ui/Icon';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
@@ -56,28 +57,12 @@ export default function ExpandableCode({
           >
             {isExpanded ? (
               <>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M5 12.5L10 7.5L15 12.5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <Icon name="chevron-up" size={16} />
                 Show Less
               </>
             ) : (
               <>
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M5 7.5L10 12.5L15 7.5"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+                <Icon name="chevron-down" size={16} />
                 Show More ({codeRef.current?.textContent.split('\n').length - maxLines} more lines)
               </>
             )}

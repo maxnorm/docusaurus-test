@@ -29,7 +29,9 @@ const config = {
   baseUrl: '/',
 
 
-  onBrokenLinks: 'warn',
+  // This will throw an error if there are broken links or markdown links
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
 
   // plugins: [],
 
