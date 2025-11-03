@@ -51,6 +51,28 @@ const config = {
         content: '7742A5A0022761B1',
       },
     },
+    // SEO & Social metadata
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:card',
+        content: 'summary_large_image',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:site',
+        content: '@compose',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:type',
+        content: 'website',
+      },
+    },
   ],
 
   presets: [
@@ -79,6 +101,13 @@ const config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+        },
+        // Sitemap policy
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.6,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
         },
         theme: {
           customCss: ['./src/css/custom.css'],
