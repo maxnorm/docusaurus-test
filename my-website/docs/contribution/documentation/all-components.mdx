@@ -34,6 +34,7 @@ import DocHero from '@site/src/components/docs/DocHero';
 import DocSubtitle from '@site/src/components/docs/DocSubtitle';
 import FeatureGrid, { FeatureGridItem } from '@site/src/components/features/FeatureGrid';
 import APIReference from '@site/src/components/api/APIReference';
+import IconGallery from '@site/src/components/docs/IconGallery';
 
 # <GradientText>Complete Component Reference & Showcase</GradientText>
 
@@ -2020,6 +2021,26 @@ Same as Callout component.
   Content here
 </CalloutBox>
 ```
+
+---
+
+## Icon Gallery
+
+Complete visual reference of all available icons. Use the Icon component with the icon name (without `.svg` extension).
+
+<IconGallery />
+
+#### Usage
+
+```jsx
+import Icon from '@site/src/components/ui/Icon';
+
+<Icon name="star" size={32} />
+<Icon name="warning" size={24} />
+<Icon name="lightbulb" size={48} />
+```
+
+**Note:** Use the icon name without the `.svg` extension. All icons support the `size` prop to adjust their dimensions.
 
 ---
 
